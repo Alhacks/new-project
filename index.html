@@ -20,26 +20,196 @@
         </nav>
         <button type="button" class="page-header__button">Войти</button>
     </header>
+
     <main class="main">
         <header class="main__header">
-            <h1 class="main__title">АРТ-ПРОСТРАНСТВО</h1>
-            <img class="main__logo" src="/img/LENNI.png" alt="LENNI" />
+            <h1 class="main__title">арт-пространство
+                <span class="main__title-big">Lenni</span>
+                для людей, горящих сердцем и делом <br>
+                место для настоящего
+            </h1>
         </header>
-        <section class="main__section">
-            <h2 class="main__section-title">О нас</h2>
-        </section>
-        <section class="main__section">
-            <h2 class="main__section-title">Мероприятия</h2>
-        </section>
-        <section class="main__section">
-            <h2 class="main__section-title">Блог</h2>
-        </section>
-        <section class="main__section">
-            <h2 class="main__section-title">Контакты</h2>
-        </section>
-    </main>
-    <footer class="footer">
-        
-    </footer>
 
+        <section class="main__section section-offers">
+            <span class="section-offers__title">Я хочу:</span>
+            <button type="button" class="button section-offers__button section-offers__button_lead">Провести мероприятие</button>
+            <button type="button" class="button section-offers__button section-offers__button_secondary">Стать арендатором</button>
+        </section>
+
+        <section class="main__section section-about">
+            <h2 class="main__section-title">О нас</h2>
+            <article class="section-about__card">
+                <span class="section-about__card-title">Проект «Millennials»</span>
+                <p class="section-about__card-description">
+                    Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием
+                    сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь
+                    им воплотить их мечту в реальность.
+                </p>
+            </article>
+
+            <article class="section-about__card section-about__card_type_images">
+                <img class="section-about__card-pic section-about__card-pic_left" src="/img/pic.jpg" alt="О нас" />
+                <img class="section-about__card-pic section-about__card-pic_right" src="/img/pic.png" alt="О нас" />
+            </article>
+
+            <article class="section-about__card section-about__card_type_place">
+                <span class="section-about__card-title">
+                    Мы предоставляем площади для
+                    вашего мероприятия
+                </span>
+                <p class="section-about__card-description">
+                    И оказываем помощь с организацией, если вам это нужно.
+                    Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым
+                    ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+                </p>
+            </article>
+
+            <article class="section-about__card section-about__card_type_decor">
+                <img class="section-about__card-pic" src="/img/pic_d.png" alt="О нас" />
+                <p class="section-about__card-description">
+                    Мы уже успешно организовали и
+                    провели более 100 проектов.
+                    Посмотрите, как это было классно.
+                </p>
+                <button type="button" class="button section-about__card-button">Смотреть</button>
+            </article>
+        </section>
+
+        <section class="main__section section-events">
+            <h2 class="main__section-title">Мероприятия</h2>
+            <article class="section-events__card">
+                <img class="section-events__card-pic" src="/img/nirvana.jpg" alt="Nirvana" />
+                <h3 class="section-events__card-title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
+                <p class="section-events__card-description">
+                    Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный
+                    материал.
+                </p>
+                <time class="section-events__card-date" datetime="2024-12-07T18:00">07.12.2024 | начало 18:00</time>
+            </article>
+
+            <article class="section-events__card">
+                <img class="section-events__card-pic" src="/img/HowStuffWorks.png" alt="HowStuffWorks" />
+                <h3 class="section-events__card-title">Есть тема, нужно обсудить с HowStuffWorks</h3>
+                <p class="section-events__card-description">
+                    Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.
+                </p>
+                <time class="section-events__card-date" datetime="2024-12-14T18:30">14.12.2024 | начало 18.30</time>
+            </article>
+
+            <article class="section-events__card">
+                <img class="section-events__card-pic" src="/img/Sade.png" alt="Sade" />
+                <h3 class="section-events__card-title">Вечер | The Best of Sade</h3>
+                <p class="section-events__card-description">
+                    Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и
+                    фанка.
+                </p>
+                <time class="section-events__card-date" datetime="2024-12-16T20:00">16.12.2024 | начало 20.00</time>
+            </article>
+
+            <div class="slider-controls">
+                <button type="button" class="button slider-controls__btn slider-controls__btn_prev">Назад</button>
+                <button type="button" class="button slider-controls__btn slider-controls__btn_next">Вперёд</button>
+            </div>
+
+            <button type="button" class="button section-events__button">Смотреть все</button>
+        </section>
+
+        <section class="main__section section-blog">
+            <h2 class="main__section-title">Блог</h2>
+            <article class="section-blog__card">
+                <img class="section-blog__card-pic" src="/img/foto.jpg" alt="Фотосессия" />
+                <time class="section-blog__card-date" datetime="2024-11-26">26.11.2024</time>
+                <h3 class="section-blog__card-title">Фотосессия в стенах Театра драмы</h3>
+                <p class="section-blog__card-description">
+                    Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и
+                    у нас получилась отличная работа. Смотрите как это было
+                </p>
+                <a href="#" class="section-blog__card-link">Смотреть</a>
+            </article>
+
+            <article class="section-blog__card">
+                <img class="section-blog__card-pic" src="/img/VR.png" alt="Выставка VR в Томске" />
+                <time class="section-blog__card-date" datetime="2024-11-05">05.11.2024</time>
+                <h3 class="section-blog__card-title">Выставка VR в Томске</h3>
+                <p class="section-blog__card-description">
+                    Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим
+                    клиентам лучший игровой VR-опыт в Томске.
+                </p>
+                <a href="#" class="section-blog__card-link">Смотреть</a>
+            </article>
+
+            <article class="section-blog__card">
+                <img class="section-blog__card-pic" src="/img/rocking.png" alt="Rocking radio в заброшенном ангаре" />
+                <time class="section-blog__card-date" datetime="2024-11-01">01.11.2024</time>
+                <h3 class="section-blog__card-title">Rocking radio в заброшенном ангаре</h3>
+                <p class="section-blog__card-description">
+                    15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать
+                    лучшую вечеринку года для ребят из Новосибирска.
+                </p>
+                <a href="#" class="section-blog__card-link">Смотреть</a>
+            </article>
+
+            <button type="button" class="button section-blog__button">Смотреть все</button>
+        </section>
+
+        <section class="main__section section-contacts">
+            <h2 class="main__section-title">Контакты</h2>
+            <article class="section-contacts__card contact-building">
+                <h4 class="section-contacts__card-title">Томск, Красноармейская 146</h4>
+                <p class="section-contacts__card-description">2 этаж <br> оф. 206</p>
+            </article>
+
+            <article class="section-contacts__card contact-rent">
+                <h4 class="section-contacts__card-title">Отдел аренды</h4>
+                <p class="section-contacts__card-description">8 (3822) 90-72-56 <br> idat@tusur.ru</p>
+            </article>
+
+            <article class="section-contacts__card contact-events">
+                <h4 class="section-contacts__card-title">Отдел мероприятий</h4>
+                <p class="section-contacts__card-description">8 (3822) 90-72-56 <br> idat@tusur.ru</p>
+            </article>
+
+            <article class="section-contacts__card-map">
+                <img class="section-contacts__card-pic" src="/img/map.png"
+                    alt="Карта проезда: Томск, Красноармейская 146" />
+            </article>
+        </section>
+
+        <section class="main__section section-slogan">
+        </section>
+
+        <footer class="main-footer">
+            <span class="main-footer__text">Просто делайте, что нравится,</span>
+            <span class="main-footer__text main-footer__text-right">а мы вам поможем</span>
+        </footer>
+    </main>
+
+    <footer class="page-footer">
+        <nav class="page-footer__nav">
+            <a class="page-footer__nav-link" href="#">Календарь мероприятий</a>
+            <a class="page-footer__nav-link" href="#">Провести мероприятие</a>
+            <a class="page-footer__nav-link" href="#">Стать арендатором</a>
+            <a class="page-footer__nav-link" href="#">Наши проекты</a>
+            <a class="page-footer__nav-link" href="#">Контакты</a>
+        </nav>
+        <p class="page-footer__subscribe-title">Подпишись и будь в курсе происходящего</p>
+        <form action="#" class="page-footer__subscribe-form">
+            <input class="page-footer__subscribe-input padding-0 border-0" type="email" placeholder="Email" required />
+            <button class="page-footer__subscribe-btn padding-0 border-0" type="submit">Подписаться</button>
+        </form>
+        <label class="page-footer__subscribe-label">
+            <input class="page-footer__subscribe-checkbox" type="checkbox" required checked />
+            <span class="page-footer__subscribe-consent">Согласен на обработку персональных данных</span>
+        </label>
+        <p class="page-footer__copyright">© Millennials 2025</p>
+        <p class="page-footer__bottom">
+            <span class="page-footer__bottom-privacy">Политика конфиденциальности</span>
+            <span class="page-footer__bottom-cookies">Cookies</span>
+            <img class="page-footer__bottom-social" src="/img/insta.png" alt="vk" />
+            <img class="page-footer__bottom-social" src="/img/insta.png" alt="vk" />
+            <span class="page-footer__bottom-creation">Создание и продвижение</span>
+            <img class="page-footer__bottom-dignity" src="/img/Dignity.png" alt="Dignity studio" />
+            <img class="page-footer__bottom-codes" src="/img/Codes.png" alt="Dignity studio" />
+        </p>
+    </footer>
 </body>
