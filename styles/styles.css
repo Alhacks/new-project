@@ -4,7 +4,7 @@
 .padding-0 {
     padding: 0;
 }
-body {
+.body {
     margin: 0;
     color: rgba(31, 30, 30, 1);
     background-image: url(/img/noise.png);
