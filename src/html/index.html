@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('blocks/head.html')
+
+<body class="body">
+    @@include('blocks/page-header.html')
+
+    <main class="main">
+        <div class="home">
+            <header class="main-header home__main-header">
+                <h1 class="main-header__title">арт — пространство</h1>
+                <div class="main-logo main-header__logo">
+                    <img class="main-logo__image" src="/assets/images/LENNI.png" alt="LENNI">
+                </div>
+                <p class="main-header__slogan">для людей, горящих сердцЕМ и делом
+                место для настоящего</p>
+            </header>
+
+            <section class="offers home__offers">
+                <h4 class="offers__section-title">я хочу:</h4>
+                <div class="offers__buttons">
+                    <button class="offers__button btn btn--red" type="button">Провести мероприятие</button>
+                    <button class="offers__button btn" type="button">Стать арендатором</button>
+                </div>
+            </section>
+
+            <section class="about home__about">
+                <h4 class="about__section-title section-title">О нас</h4>
+                <div class="about__container">
+                    
+                </div>
+            </section>
+
+            @@include('blocks/events.html')
+
+            <!-- prettier-ignore -->
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+
+            <section class="contacts home__contacts">
+                <h4 class="contacts__section-title section-title">Контакты</h4>
+                <div class="contacts__container">
+            
+                </div>
+            </section>
+
+            <div class="doit">
+
+            </div>
+        </div>
+    </main>
+
+    @@include('blocks/page-footer.html')
+</body>
+</html>

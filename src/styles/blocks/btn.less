@@ -1,0 +1,33 @@
+.btn {
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border: 1px solid @black;
+    background-color: transparent;
+    outline: none;
+    color: @black;
+    font-family: @font1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375;
+    text-align: center;
+    text-decoration: none;
+    transition: color @transition-speed, background-color @transition-speed, border-color @transition-speed;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @black;
+        color: @white;
+    }
+
+    &--red {
+        background-color: @red;
+        color: @white;
+        border: none;
+
+        &:hover {
+            background-color: @red-hover;
+        }
+    }
+}
