@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<!-- <html lang="ru" class="show-event-popup"> -->
     @@include('blocks/head.html')
 
 <body class="body">
@@ -31,7 +32,45 @@
                 </div>
             </section>
 
-            @@include('blocks/events.html')
+            <div class="events">
+            
+                <section class="listing events__listing">
+                    <h1 class="listing__title section-title">Мероприятия</h1>
+            
+                    <div class="listing__events-list">
+            
+                        <!-- prettier-ignore -->
+                        @@loop('blocks/event-card.html', [
+                        {
+                        img: '/assets/images/events/nirvana.png',
+                        alt: 'nirvana',
+                        title: 'Собираемся и слушаем альбом Nirvana',
+                        descr: 'Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.',
+                        datetime: '2024-12-07T18:00',
+                        time: '07.12.2024 | начало 18.00'
+                        },
+                        {
+                        img: '/assets/images/events/HowStuffWorks.png',
+                        alt: 'HowStuffWorks',
+                        title: 'Есть тема, нужно обсудить с HowStuffWorks',
+                        descr: 'Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.',
+                        datetime: '2024-12-14T18:30',
+                        time: '14.12.2024 | начало 18.30'
+                        },
+                        {
+                        img: '/assets/images/events/Sade.png',
+                        alt: 'Вечер | The Best of Sade',
+                        title: 'Вечер | The Best of Sade',
+                        descr: 'Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.',
+                        datetime: '2024-12-16T20:00',
+                        time: '16.12.2024 | начало 20.00'
+                        }
+                        ])
+            
+                    </div>
+                </section>
+            
+            </div>
 
             <!-- prettier-ignore -->
             @@include('blocks/blog-listing.html', {"class": "home__listing"})
@@ -50,5 +89,6 @@
     </main>
 
     @@include('blocks/page-footer.html')
+    @@include('blocks/event-pp.html')
 </body>
 </html>

@@ -1,0 +1,48 @@
+.x-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: @black;
+    transition: background-color @transition-speed;
+
+    &:hover,
+    &:active {
+        background-color: @red;
+    }
+
+    &__icon {
+        color: @white;
+        pointer-events: none;
+    }
+
+    &__container {
+        box-sizing: border-box;
+        width: 100%;
+        mask-size: 1040px;
+        margin: 0 auto;
+        padding: 0 40px 40px;
+    }
+
+    &__title {
+        position: relative;
+        width: 100%;
+        max-width: 595px;
+        margin: -40px 0 70px;
+        padding: 10px 85px;
+        background-color: @black;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: @font2;
+        font-size: 22px;
+        line-height: 1.36;
+        color: @white;
+        letter-spacing: 0.02em;
+        z-index: 1;
+    }
+}
