@@ -1,0 +1,54 @@
+.table-vertical {
+    display: grid;
+    width: 95px;
+    height: 121px;
+    grid-template-areas:
+        "place1 board  place2"
+        "place3 board  place4"
+        "place5 board  place6"
+        ".      place7 .     ";
+    grid-template-columns: 24px auto 24px;
+        grid-template-rows: 24px 24px 24px 24px;
+        column-gap: 3px;
+        row-gap: 9px;
+
+    & * {
+        background-color: @black;
+        border-color: @black;
+    }
+
+    &__pl1 {
+        grid-area: place1;
+    }
+
+    &__pl2 {
+        grid-area: place2;
+    }
+
+    &__pl3 {
+        grid-area: place3;
+    }
+
+    &__pl4 {
+        grid-area: place4;
+    }
+
+    &__pl5 {
+        grid-area: place5;
+    }
+
+    &__pl6 {
+        grid-area: place6;
+    }
+
+    &__pl7 {
+        grid-area: place7;
+        position: relative;
+        top: -2px;
+    }
+
+    &__board {
+        grid-area: board;
+
+    }
+}

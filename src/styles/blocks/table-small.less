@@ -1,0 +1,29 @@
+.table-small {
+    display: grid;
+    width: 90px;
+    height: 90px;
+    grid-template-areas:
+        ".      place1"
+        "place2 board "
+        ".      place3";
+    grid-template-columns: 24px auto;
+        grid-template-rows: 24px 37px 24px;
+        gap: 3px;
+        
+
+    &__pl1 {
+        grid-area: place1;
+    }
+
+    &__pl2 {
+        grid-area: place2;
+    }
+
+    &__pl3 {
+        grid-area: place3;
+    }
+
+    &__board {
+        grid-area: board;
+    }
+}

@@ -1,0 +1,102 @@
+.scheme {
+    display: grid;
+    grid-template-areas:
+        ".       .       stage   .       .      "
+        "table10 table9  dance   table1  table2 "
+        "table10 table8  dance   table4  table3 "
+        "table11 table6  table7  table5  . ";
+    grid-template-columns: 142px 142px 188px 146px 162px;
+    grid-template-rows: 74px 93px 140px 166px;
+
+    &__stage {
+        grid-area: stage;
+        position: relative;
+        justify-self: end;
+    }
+
+    &__dance {
+        grid-area: dance;
+        position: relative;
+        top: 12px;
+        left: 37px;
+    }
+
+    &__table1 {
+        grid-area: table1;
+        position: relative;
+        top: 8px;
+        justify-self: end;
+    }
+
+    &__table2 {
+        grid-area: table2;
+        position: relative;
+        top: 4px;
+        justify-self: end;
+    }
+
+    &__table3 {
+        grid-area: table3;
+        position: relative;
+        top: 92px;
+        justify-self: end;
+    }
+
+    &__table4 {
+        grid-area: table4;
+        align-self: end;
+        position: relative;
+        top: 5px;
+        justify-self: end;
+    }
+
+    &__table5 {
+        grid-area: table5;
+            align-self: end;
+    }
+
+    &__table6 {
+        grid-area: table6;
+        position: relative;
+        left: 87px;
+        align-self: end;
+    }
+
+    &__table7 {
+        grid-area: table7;
+        position: relative;
+        top: -50px;
+        left: 9px;
+    }
+
+    &__table8 {
+        grid-area: table8;
+        align-self: end;
+    }
+
+    &__table9 {
+        grid-area: table9;
+        position: relative;
+        justify-self: end;
+    }
+
+    &__table10 {
+        grid-area: table10;
+        position: relative;
+        justify-self: end;
+    }
+
+    &__table11 {
+        grid-area: table11;
+        position: relative;
+        top: -47px;
+    }
+
+    &-place {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+    }
+
+    
+}

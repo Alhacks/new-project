@@ -1,0 +1,40 @@
+.board {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-family: @font1;
+    font-size: 20px;
+    line-height: 1.35;
+    color: @white;
+    border: 1px solid;
+
+    .tcolor--gray & {
+        color: @black;
+    }
+
+    .table-small & {
+        width: 62px;
+        height: 37px;
+    }
+
+    .table-aflat &, .table-aflatnt & {
+        width: 84px;
+        height: 29px;
+    }
+
+    .table-vertical & {
+        width: 41px;
+        height: 94px;
+    }
+
+    
+
+    &--right {
+        color: @white;
+        align-items: flex-end;
+        padding-right: 6px;
+        padding-bottom: 2px;
+    }
+}

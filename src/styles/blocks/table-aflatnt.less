@@ -1,0 +1,32 @@
+.table-aflatnt {
+    display: grid;
+        width: 138px;
+        height: 56px;
+        grid-template-areas:
+            "place1 board  board  place2"
+            ".      place3 place4 .     ";
+        grid-template-columns: 24px auto auto 24px;
+        grid-template-rows: 29px 24px;
+        gap: 3px;
+        
+    
+        &__pl1 {
+            grid-area: place1;
+        }
+    
+        &__pl2 {
+            grid-area: place2;
+        }
+    
+        &__pl3 {
+            grid-area: place3;
+        }
+    
+        &__pl4 {
+            grid-area: place4;
+        }
+        
+        &__board {
+            grid-area: board;
+        }
+}

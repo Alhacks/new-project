@@ -52,7 +52,7 @@
             <form class="reserve event__reserve">
                 <div class="check-list reserve__check-list">
                     <h4 class="check-list__title">Забронировать столик</h4>
-                    <label class="check">
+                    <label class="check check--red">
                         <input class="check__input" type="checkbox" name="desk1" checked />
                         <span class="check__mark"></span>
                         <span class="check__label">1 стол</span>
@@ -62,12 +62,12 @@
                         <span class="check__mark"></span>
                         <span class="check__label">2 стол</span>
                     </label>
-                    <label class="check check--red">
+                    <label class="check">
                         <input class="check__input" type="checkbox" name="desk3" />
                         <span class="check__mark"></span>
                         <span class="check__label">3 стол</span>
                     </label>
-                    <label class="check">
+                    <label class="check check--red">
                         <input class="check__input" type="checkbox" name="desk4" />
                         <span class="check__mark"></span>
                         <span class="check__label">4 стол</span>
@@ -109,11 +109,121 @@
                     </label>
 
                 </div>
-                <div class="reserve__scheme">
-                    Схема столов
+                <div class="scheme reserve__scheme">
+                    <div class="stage scheme__stage">Сцена</div>
+                    <div class="dance scheme__dance">Танцпол</div>
+                    <div class="table-aflat tcolor--red scheme__table1">
+                        <div class="place table-aflat__pl1"></div>
+                        <div class="place table-aflat__pl2"></div>
+                        <div class="place table-aflat__pl3"></div>
+                        <div class="place table-aflat__pl4"></div>
+                        <div class="place table-aflat__pl5"></div>
+                        <div class="board table-aflat__board">1</div>
+                    </div>
+                    <div class="table-vertical tcolor--black free scheme__table2">
+                        <div class="place table-vertical__pl1"></div>
+                        <div class="place table-vertical__pl2"></div>
+                        <div class="place table-vertical__pl3"></div>
+                        <div class="place table-vertical__pl4"></div>
+                        <div class="place table-vertical__pl5"></div>
+                        <div class="place table-vertical__pl6"></div>
+                        <div class="place table-vertical__pl7"></div>
+                        <div class="board table-vertical__board">2</div>
+                    </div>
+                    <div class="table-vertical tcolor--black free scheme__table3">
+                        <div class="place table-vertical__pl1"></div>
+                        <div class="place table-vertical__pl2"></div>
+                        <div class="place table-vertical__pl3"></div>
+                        <div class="place table-vertical__pl4"></div>
+                        <div class="place table-vertical__pl5"></div>
+                        <div class="place table-vertical__pl6"></div>
+                        <div class="place table-vertical__pl7"></div>
+                        <div class="board table-vertical__board">3</div>
+                    </div>
+                    <div class="table-aflat tcolor--red free scheme__table4">
+                        <div class="place table-aflat__pl1"></div>
+                        <div class="place table-aflat__pl2"></div>
+                        <div class="place table-aflat__pl3"></div>
+                        <div class="place table-aflat__pl4"></div>
+                        <div class="place table-aflat__pl5"></div>
+                        <div class="board table-aflat__board">4</div>
+                    </div>
+                    <div class="table-vertical tcolor--disable scheme__table5">
+                        <div class="place table-vertical__pl1"></div>
+                        <div class="place table-vertical__pl2"></div>
+                        <div class="place table-vertical__pl3"></div>
+                        <div class="place table-vertical__pl4"></div>
+                        <div class="place table-vertical__pl5"></div>
+                        <div class="place table-vertical__pl6"></div>
+                        <div class="place table-vertical__pl7"></div>
+                        <div class="board table-vertical__board">5</div>
+                    </div>
+                    <div class="table-vertical tcolor--black free scheme__table6">
+                        <div class="place table-vertical__pl1"></div>
+                        <div class="place table-vertical__pl2"></div>
+                        <div class="place table-vertical__pl3"></div>
+                        <div class="place table-vertical__pl4"></div>
+                        <div class="place table-vertical__pl5"></div>
+                        <div class="place table-vertical__pl6"></div>
+                        <div class="place table-vertical__pl7"></div>
+                        <div class="board table-vertical__board">6</div>
+                    </div>
+                    <div class="table-aflatnt tcolor--red scheme__table7">
+                        <div class="place table-aflatnt__pl1"></div>
+                        <div class="place table-aflatnt__pl2"></div>
+                        <div class="place table-aflatnt__pl3"></div>
+                        <div class="place table-aflatnt__pl4"></div>
+                        <div class="board table-aflatnt__board">7</div>
+                    </div>
+                    <div class="table-small free tcolor--red scheme__table8">
+                        <div class="place table-small__pl1"></div>
+                        <div class="place table-small__pl2"></div>
+                        <div class="place table-small__pl3"></div>
+                        <div class="board table-small__board">8</div>
+                    </div>
+                    <div class="table-small tcolor--red free scheme__table9">
+                        <div class="place table-small__pl1"></div>
+                        <div class="place table-small__pl2"></div>
+                        <div class="place table-small__pl3"></div>
+                        <div class="board table-small__board">9</div>
+                    </div>
+                    <div class="table-bar tcolor--black scheme__table10">
+                        <div class="place table-bar__pl1"></div>
+                        <div class="place table-bar__pl2"></div>
+                        <div class="place table-bar__pl3"></div>
+                        <div class="place table-bar__pl4"></div>
+                        <div class="board board--right table-bar__right">10</div>
+                        <div class="board board--bot table-bar__bot"></div>
+                    </div>
+                    <div class="table-vertical tcolor--black free scheme__table11">
+                        <div class="place table-vertical__pl1"></div>
+                        <div class="place table-vertical__pl2"></div>
+                        <div class="place table-vertical__pl3"></div>
+                        <div class="place table-vertical__pl4"></div>
+                        <div class="place table-vertical__pl5"></div>
+                        <div class="place table-vertical__pl6"></div>
+                        <div class="place table-vertical__pl7"></div>
+                        <div class="board table-vertical__board">11</div>
+                    </div>
+
+
+                    
                 </div>
-                <div class="reserve__order">
-                    Оформление заказа
+                <div class="order reserve__order">
+                    <h4 class="order__title">Ваши пригласительные билеты</h4>
+                    <div class="order__item">
+                        <span class="order__item-details">9 шт. | 1400 ₽</span>
+                        <span class="order__item-price">12 600 ₽</span>
+                    </div>
+                    <div class="order__item">
+                        <span class="order__item-details">4 шт. | 1250 ₽</span>
+                        <span class="order__item-price">5 000 ₽</span>
+                    </div>
+                    <div class="order__total">
+                        <span class="order__total-label">Сумма</span>
+                        <span class="order__total-value">17 600 ₽</span>
+                    </div>
+                    <button class="btn btn--red order__submit">Купить билеты</button>
                 </div>
                 <div class="legend reserve__legend">
                     <h4 class="legend__title">Стоимость пригласительного билета</h4>

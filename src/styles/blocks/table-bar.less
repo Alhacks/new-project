@@ -1,0 +1,38 @@
+.table-bar {
+    display: grid;
+    width: 127px;
+    height: 93px;
+    grid-template-areas:
+        ".      .      place1 right"
+        "place2 place3 place4 right"
+        "bot    bot    bot    right";
+    grid-template-columns: auto auto auto 30px;
+    grid-template-rows: auto auto 30px;
+    
+
+    &__pl1 {
+        grid-area: place1;
+    }
+
+    &__pl2 {
+        grid-area: place2;
+    }
+
+    &__pl3 {
+        grid-area: place3;
+    }
+
+    &__pl4 {
+        grid-area: place4;
+    }
+
+    &__right {
+        grid-area: right;
+    }
+
+    &__bot {
+        grid-area: bot;
+    }
+
+
+}
