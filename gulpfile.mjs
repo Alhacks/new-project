@@ -36,6 +36,7 @@ const resources = {
         "src/assets/favicons/**/*.*",
         "src/assets/fonts/**/*.{woff,woff2}",
         "src/assets/icons/**/*.*",
+        "!src/assets/icons/symbols.svg",
         // "src/assets/video/**/*.{mp4,webm}",
         // "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
         // "src/json/**/*.json",
@@ -85,7 +86,7 @@ function style() {
 
 function js() {
     return gulp
-        .src("src/scripts/dev/*.js")
+        .src("src/scripts/dev/*.js", { allowEmpty: true })
         .pipe(plumber())
         .pipe(
             include({

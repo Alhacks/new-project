@@ -4,11 +4,30 @@
     align-items: center;
     height: 132px;
 
+    &__link {
+        box-sizing: border-box;
+        width: 128px;
+        padding-top: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        text-align: center;
+    }
+
     &__text {
-        margin: 0 0 18px 0;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
     }
 
     &__arrow {
         text-align: center;
     }
+}
+
+.more .more__arrow {
+    width: 62px;
+    height: 91px;
 }
