@@ -68,3 +68,11 @@
     z-index: 1;
   }
 }
+.pp {
+  @media @bw768 {
+    padding: 60px 20px 30px;
+    &__container { padding: 0 20px 30px; }
+    &__title { box-sizing: border-box; width: calc(100% + 40px); min-height: 0; margin: 0 -20px 30px; padding: 20px; font-size: 24px; }
+    &__x-btn { top: -45px; right: 0; }
+  }
+}

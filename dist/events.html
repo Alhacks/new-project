@@ -4,13 +4,37 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lenni Art</title>
+  <meta name="description" content="Lenni Art — арт-пространство для концертов, выставок и встреч в Томске." />
+  <meta name="keywords" content="Lenni Art, арт-пространство, Томск, концерты, выставки" />
+  <meta name="application-name" content="Lenni Art" />
+  <meta name="apple-mobile-web-app-title" content="Lenni Art" />
+  <meta name="theme-color" content="#dedede" />
+  <meta name="msapplication-TileColor" content="#dedede" />
+  <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png" />
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />
+  <meta property="og:title" content="Lenni Art — арт-пространство" />
+  <meta property="og:description" content="Концерты, выставки и встречи в Томске." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicons/android-chrome-512x512.png" />
+  <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png" />
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#bc3324" />
+  <link rel="manifest" href="assets/favicons/manifest.webmanifest" />
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap">
 </head>
+
 
 <body class="body">
 
@@ -295,12 +319,30 @@
   </main>
 
   <footer class="page-footer">
-    Footer
+    <div class="page-footer__container">
+      <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+        <h2 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h2>
+        <div class="field subscribe-form__field">
+          <label for="js-subscribeEmail" class="subscribe-form__label">Электронная почта</label>
+          <div class="subscribe-form__row">
+            <input class="field__input subscribe-form__input" type="email" name="email" id="js-subscribeEmail" placeholder="Email" required />
+            <button class="subscribe-form__submit" type="submit">Подписаться</button>
+          </div>
+        </div>
+        <label class="check subscribe-form__check">
+          <input class="check__input" type="checkbox" name="agree" required />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
+        </label>
+        <p class="subscribe-form__message" id="js-subscribeMessage" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </footer>
+
   <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn js-ppCloseBtn">
+        <button type="button" class="pp__x-btn x-btn js-ppCloseBtn" aria-label="Закрыть форму">
           <svg class="x-btn__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.40864 5.99915L11.7045 1.71268C11.8926 1.52453 11.9983 1.26935 11.9983 1.00326C11.9983 0.737183 11.8926 0.481998 11.7045 0.29385C11.5164 0.105701 11.2612 0 10.9952 0C10.7291 0 10.474 0.105701 10.2859 0.29385L6 4.59031L1.71414 0.29385C1.52602 0.105701 1.27087 -1.98247e-09 1.00483 0C0.738783 1.98247e-09 0.483635 0.105701 0.295513 0.29385C0.107391 0.481998 0.00170495 0.737183 0.00170495 1.00326C0.00170495 1.26935 0.107391 1.52453 0.295513 1.71268L4.59136 5.99915L0.295513 10.2856C0.201875 10.3785 0.127553 10.489 0.0768329 10.6108C0.0261132 10.7325 0 10.8631 0 10.995C0 11.1269 0.0261132 11.2575 0.0768329 11.3793C0.127553 11.501 0.201875 11.6116 0.295513 11.7044C0.388386 11.7981 0.49888 11.8724 0.620622 11.9232C0.742363 11.9739 0.872943 12 1.00483 12C1.13671 12 1.26729 11.9739 1.38903 11.9232C1.51077 11.8724 1.62127 11.7981 1.71414 11.7044L6 7.40799L10.2859 11.7044C10.3787 11.7981 10.4892 11.8724 10.611 11.9232C10.7327 11.9739 10.8633 12 10.9952 12C11.1271 12 11.2576 11.9739 11.3794 11.9232C11.5011 11.8724 11.6116 11.7981 11.7045 11.7044C11.7981 11.6116 11.8724 11.501 11.9232 11.3793C11.9739 11.2575 12 11.1269 12 10.995C12 10.8631 11.9739 10.7325 11.9232 10.6108C11.8724 10.489 11.7981 10.3785 11.7045 10.2856L7.40864 5.99915Z" fill="white" />
           </svg>
@@ -313,7 +355,7 @@
           <br />
           и мы подберем площадку
         </h2>
-        <form class="pp__form form">
+        <form class="pp__form form" id="js-eventForm">
 
           <div class="form__list">
             <div class="field form__field form__field--w50">
@@ -348,7 +390,7 @@
                 <span class="field__title">
                   Планируемое количество посетителей:
                 </span>
-                <select name="amount" class="field__select">
+                <select name="amount" class="field__select js-selectric" required>
                   <option value="20">до 20 человек</option>
                   <option value="100">от 20 до 100 человек</option>
                   <option value="500">от 100 до 500 человек</option>
@@ -356,16 +398,17 @@
                 </select>
               </label>
 
-              <div class="field form__field form__field--m0">
+              <div class="field form__field form__field--m0 js-dateField">
                 <h5 class="field__title">
                   Дата проведения:
                 </h5>
-                <div class="field_date">
+                <div class="field__date">
                   <div class="field__date-inputs">
-                    <input type="text" class="field__date-input" placeholder="ДД">
-                    <input type="text" class="field__date-input" placeholder="ММ">
-                    <input type="text" class="field__date-input field__date-input--year" placeholder="ГГГГ">
+                    <input type="text" class="field__date-input js-dateDay" placeholder="ДД" readonly aria-label="День">
+                    <input type="text" class="field__date-input js-dateMonth" placeholder="ММ" readonly aria-label="Месяц">
+                    <input type="text" class="field__date-input field__date-input--year js-dateYear" placeholder="ГГГГ" readonly aria-label="Год">
                   </div>
+                  <input class="field__date-picker js-dateInput" type="text" name="date" readonly required aria-label="Дата проведения" />
                 </div>
               </div>
             </div>
@@ -392,7 +435,7 @@
 
             <label class="field form__field form__field--w50">
               <span class="field__label">Телефон*</span>
-              <input class="field__input" type="tel" placeholder="Телефон" name="phone" required />
+              <input class="field__input js-mobileMask" type="tel" placeholder="Телефон" name="phone" required />
             </label>
 
             <label class="field form__field form__field--w50">
@@ -404,7 +447,7 @@
 
           <label class="field form__field">
             <span class="field__title">Есть пожелания? Напишите нам:</span>
-            <textarea class="field__textarea" name="Пожелания"></textarea>
+            <textarea class="field__textarea" name="wishes"></textarea>
           </label>
 
           <label class="check form__check">
@@ -415,6 +458,7 @@
             </span>
           </label>
 
+          <p class="form__message" id="js-eventMessage" role="status" aria-live="polite"></p>
           <div class="form__btns">
             <button type="submit" class="btn form__submit">
               Отправить
@@ -427,7 +471,18 @@
       </div>
     </div>
   </div>
+
+  <!-- Порядок подключения из лекции 12: jQuery, плагины, наш код. -->
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/swiper.min.js"></script>
   <script src="scripts/main.min.js"></script>
+  <script src="scripts/form-plugins.min.js"></script>
+  <script src="scripts/validation.min.js"></script>
+
 </body>
 
 </html>

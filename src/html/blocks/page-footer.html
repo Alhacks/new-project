@@ -1,3 +1,20 @@
 <footer class="page-footer">
-    Footer
+  <div class="page-footer__container">
+    <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+      <h2 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h2>
+      <div class="field subscribe-form__field">
+        <label for="js-subscribeEmail" class="subscribe-form__label">Электронная почта</label>
+        <div class="subscribe-form__row">
+          <input class="field__input subscribe-form__input" type="email" name="email" id="js-subscribeEmail" placeholder="Email" required />
+          <button class="subscribe-form__submit" type="submit">Подписаться</button>
+        </div>
+      </div>
+      <label class="check subscribe-form__check">
+        <input class="check__input" type="checkbox" name="agree" required />
+        <span class="check__mark"></span>
+        <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
+      </label>
+      <p class="subscribe-form__message" id="js-subscribeMessage" role="status" aria-live="polite"></p>
+    </form>
+  </div>
 </footer>

@@ -5,7 +5,7 @@
     const root = document.documentElement;
     const navToggle = document.querySelector("#js-navToggle");
 
-    navToggle.addEventListener("click", function() {
+    if (navToggle) navToggle.addEventListener("click", function() {
         root.classList.toggle("show-nav");
     });
 
@@ -68,7 +68,7 @@
 
     const contactsMap = document.querySelector("#js-contactsMap");
 
-    if (contactsMap) {
+    if (contactsMap && typeof google !== "undefined" && google.maps) {
 
         const mapStyles = [
             {

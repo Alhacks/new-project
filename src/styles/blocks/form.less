@@ -60,3 +60,11 @@
         }
     }
 }
+.form {
+  &__message { margin: 0 0 16px; }
+  @media @bw768 {
+    &__list { gap: 0; }
+    &__field--w50, &__group--w50, &__submit { width: 100%; }
+    &__btns { flex-direction: column; gap: 20px; }
+  }
+}

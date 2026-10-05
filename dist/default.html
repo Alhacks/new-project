@@ -4,13 +4,37 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lenni Art</title>
+  <meta name="description" content="Lenni Art — арт-пространство для концертов, выставок и встреч в Томске." />
+  <meta name="keywords" content="Lenni Art, арт-пространство, Томск, концерты, выставки" />
+  <meta name="application-name" content="Lenni Art" />
+  <meta name="apple-mobile-web-app-title" content="Lenni Art" />
+  <meta name="theme-color" content="#dedede" />
+  <meta name="msapplication-TileColor" content="#dedede" />
+  <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png" />
+  <meta name="msapplication-config" content="assets/favicons/browserconfig.xml" />
+  <meta property="og:title" content="Lenni Art — арт-пространство" />
+  <meta property="og:description" content="Концерты, выставки и встречи в Томске." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/favicons/android-chrome-512x512.png" />
+  <link rel="icon" href="assets/favicons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png" />
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#bc3324" />
+  <link rel="manifest" href="assets/favicons/manifest.webmanifest" />
   <link rel="stylesheet" href="/styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap">
 </head>
+
 
 <body class="body">
 
@@ -118,9 +142,37 @@
     </article>
   </main>
   <footer class="page-footer">
-    Footer
+    <div class="page-footer__container">
+      <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+        <h2 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h2>
+        <div class="field subscribe-form__field">
+          <label for="js-subscribeEmail" class="subscribe-form__label">Электронная почта</label>
+          <div class="subscribe-form__row">
+            <input class="field__input subscribe-form__input" type="email" name="email" id="js-subscribeEmail" placeholder="Email" required />
+            <button class="subscribe-form__submit" type="submit">Подписаться</button>
+          </div>
+        </div>
+        <label class="check subscribe-form__check">
+          <input class="check__input" type="checkbox" name="agree" required />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
+        </label>
+        <p class="subscribe-form__message" id="js-subscribeMessage" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </footer>
+
+  <!-- Порядок подключения из лекции 12: jQuery, плагины, наш код. -->
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/swiper.min.js"></script>
   <script src="scripts/main.min.js"></script>
+  <script src="scripts/form-plugins.min.js"></script>
+  <script src="scripts/validation.min.js"></script>
+
 </body>
 
 </html>
