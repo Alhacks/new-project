@@ -1,0 +1,90 @@
+<section class="upcoming @@class">
+    <div class="upcoming__wrapper">
+        <div class="upcoming__container">
+            <h2 class="upcoming__title section-title">
+                Мероприятия
+            </h2>
+            <div class="upcoming__swiper swiper swiper--3s js-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "img": "assets/images/events/nirvana-406w.jpg",
+                            "img_srcset": "assets/images/events/nirvana-280w.jpg 280w, assets/images/events/nirvana-406w.jpg 406w",
+                            "img_webp_srcset": "assets/images/events/nirvana-280w.webp 280w, assets/images/events/nirvana-406w.webp 406w",
+                            "img_small": "assets/images/events/nirvana-280w.jpg",
+                            "img_small_webp": "assets/images/events/nirvana-280w.webp",
+                            "img_width": 406,
+                            "img_height": 434,
+                            alt: 'nirvana',
+                            title: 'Собираемся и слушаем альбом Nirvana',
+                            descr: 'Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.',
+                            datetime: '2024-12-07T18:00',
+                            time: '07.12.2024 | начало 18.00'
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                        "img": "assets/images/events/HowStuffWorks-406w.jpg",
+                        "img_srcset": "assets/images/events/HowStuffWorks-280w.jpg 280w, assets/images/events/HowStuffWorks-406w.jpg 406w",
+                        "img_webp_srcset": "assets/images/events/HowStuffWorks-280w.webp 280w, assets/images/events/HowStuffWorks-406w.webp 406w",
+                        "img_small": "assets/images/events/HowStuffWorks-280w.jpg",
+                        "img_small_webp": "assets/images/events/HowStuffWorks-280w.webp",
+                        "img_width": 406,
+                        "img_height": 434,
+                        alt: 'HowStuffWorks',
+                        title: 'Есть тема, нужно обсудить с HowStuffWorks',
+                        descr: 'Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.',
+                        datetime: '2024-12-14T18:30',
+                        time: '14.12.2024 | начало 18.30'
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                        "img": "assets/images/events/Sade-406w.jpg",
+                        "img_srcset": "assets/images/events/Sade-280w.jpg 280w, assets/images/events/Sade-406w.jpg 406w",
+                        "img_webp_srcset": "assets/images/events/Sade-280w.webp 280w, assets/images/events/Sade-406w.webp 406w",
+                        "img_small": "assets/images/events/Sade-280w.jpg",
+                        "img_small_webp": "assets/images/events/Sade-280w.webp",
+                        "img_width": 406,
+                        "img_height": 434,
+                        alt: 'Вечер | The Best of Sade',
+                        title: 'Вечер | The Best of Sade',
+                        descr: 'Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.',
+                        datetime: '2024-12-16T20:00',
+                        time: '16.12.2024 | начало 20.00'
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                        "img": "assets/images/events/malevich-406w.jpg",
+                        "img_srcset": "assets/images/events/malevich-280w.jpg 280w, assets/images/events/malevich-406w.jpg 406w",
+                        "img_webp_srcset": "assets/images/events/malevich-280w.webp 280w, assets/images/events/malevich-406w.webp 406w",
+                        "img_small": "assets/images/events/malevich-280w.jpg",
+                        "img_small_webp": "assets/images/events/malevich-280w.webp",
+                        "img_width": 406,
+                        "img_height": 434,
+                        alt: 'Выставка Малевича в Томске',
+                        title: 'Выставка Малевича в Томске',
+                        descr: 'Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.',
+                        datetime: '2024-12-23T20:00',
+                        time: '23.12.2024 | начало 20.00'
+                        })
+                    </div>
+                </div>
+                <footer class="swiper-footer">
+                    <button type="button" class="swiper-arrow-prev arrow arrow--left" aria-label="Предыдущее мероприятие">
+                        <svg class="arrow__icon" width="91" height="60" aria-hidden="true">
+                            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper-arrow-next arrow" aria-label="Следующее мероприятие">
+                        <svg class="arrow__icon" width="91" height="60" aria-hidden="true">
+                            <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>

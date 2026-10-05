@@ -11,6 +11,12 @@
     transition: color @transition-speed;
     &:hover, &:focus-visible { color: @red; }
     &__icon { display: block; width: 100%; height: 100%; }
+    &--left { transform: rotate(180deg); }
+    &--disabled {
+        color: @gray;
+        pointer-events: none;
+        cursor: default;
+    }
     &--down { width: 62px; height: 92px; }
     @media @bw1340 {
         width: 67px;

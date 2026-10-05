@@ -43,7 +43,7 @@
             <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
 
@@ -63,10 +63,11 @@
       <section class="offers home__offers">
         <h4 class="offers__section-title">я хочу:</h4>
         <div class="offers__buttons">
-          <button class="offers__button btn btn--red" type="button">Провести мероприятие</button>
+          <button class="offers__button btn btn--red" type="button" id="js-eventOpenBtn">Провести мероприятие</button>
           <button class="offers__button btn" type="button">Стать арендатором</button>
         </div>
       </section>
+
 
       <section class="about home__about">
         <h4 class="about__section-title section-title">О нас</h4>
@@ -75,61 +76,96 @@
         </div>
       </section>
 
-      <div class="events">
+      <section class="upcoming home__upcoming">
+        <div class="upcoming__wrapper">
+          <div class="upcoming__container">
+            <h2 class="upcoming__title section-title">
+              Мероприятия
+            </h2>
+            <div class="upcoming__swiper swiper swiper--3s js-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="event-card listing__event-card">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <source type="image/webp" srcset="assets/images/events/nirvana-280w.webp 280w, assets/images/events/nirvana-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
+                        <img src="assets/images/events/nirvana-406w.jpg" srcset="assets/images/events/nirvana-280w.jpg 280w, assets/images/events/nirvana-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="nirvana" loading="lazy" decoding="async" class="event-card__img" />
+                      </picture>
 
-        <section class="listing events__listing">
-          <h1 class="listing__title section-title">Мероприятия</h1>
+                      <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
 
-          <div class="listing__events-list">
+                      <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
 
-            <!-- prettier-ignore -->
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source type="image/webp" srcset="assets/images/events/nirvana-280w.webp 280w, assets/images/events/nirvana-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
-                  <img src="assets/images/events/nirvana-406w.jpg" srcset="assets/images/events/nirvana-280w.jpg 280w, assets/images/events/nirvana-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="nirvana" loading="lazy" decoding="async" class="event-card__img" />
-                </picture>
+                      <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="event-card listing__event-card">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <source type="image/webp" srcset="assets/images/events/HowStuffWorks-280w.webp 280w, assets/images/events/HowStuffWorks-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
+                        <img src="assets/images/events/HowStuffWorks-406w.jpg" srcset="assets/images/events/HowStuffWorks-280w.jpg 280w, assets/images/events/HowStuffWorks-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="HowStuffWorks" loading="lazy" decoding="async" class="event-card__img" />
+                      </picture>
 
-                <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                      <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
 
-                <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                      <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
 
-                <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source type="image/webp" srcset="assets/images/events/HowStuffWorks-280w.webp 280w, assets/images/events/HowStuffWorks-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
-                  <img src="assets/images/events/HowStuffWorks-406w.jpg" srcset="assets/images/events/HowStuffWorks-280w.jpg 280w, assets/images/events/HowStuffWorks-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="HowStuffWorks" loading="lazy" decoding="async" class="event-card__img" />
-                </picture>
+                      <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="event-card listing__event-card">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <source type="image/webp" srcset="assets/images/events/Sade-280w.webp 280w, assets/images/events/Sade-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
+                        <img src="assets/images/events/Sade-406w.jpg" srcset="assets/images/events/Sade-280w.jpg 280w, assets/images/events/Sade-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="Вечер | The Best of Sade" loading="lazy" decoding="async" class="event-card__img" />
+                      </picture>
 
-                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                      <h4 class="event-card__title">Вечер | The Best of Sade</h4>
 
-                <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                      <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
 
-                <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
-              </a>
-            </article>
-            <article class="event-card listing__event-card">
-              <a href="#" class="event-card__link">
-                <picture class="event-card__picture">
-                  <source type="image/webp" srcset="assets/images/events/Sade-280w.webp 280w, assets/images/events/Sade-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
-                  <img src="assets/images/events/Sade-406w.jpg" srcset="assets/images/events/Sade-280w.jpg 280w, assets/images/events/Sade-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="Вечер | The Best of Sade" loading="lazy" decoding="async" class="event-card__img" />
-                </picture>
+                      <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="event-card listing__event-card">
+                    <a href="#" class="event-card__link">
+                      <picture class="event-card__picture">
+                        <source type="image/webp" srcset="assets/images/events/malevich-280w.webp 280w, assets/images/events/malevich-406w.webp 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
+                        <img src="assets/images/events/malevich-406w.jpg" srcset="assets/images/events/malevich-280w.jpg 280w, assets/images/events/malevich-406w.jpg 406w" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" width="406" height="434" alt="Выставка Малевича в Томске" loading="lazy" decoding="async" class="event-card__img" />
+                      </picture>
 
-                <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                      <h4 class="event-card__title">Выставка Малевича в Томске</h4>
 
-                <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                      <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
 
-                <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
-              </a>
-            </article>
-
+                      <time datetime="2024-12-23T20:00" class="event-card__time">23.12.2024 | начало 20.00</time>
+                    </a>
+                  </article>
+                </div>
+              </div>
+              <footer class="swiper-footer">
+                <button type="button" class="swiper-arrow-prev arrow arrow--left" aria-label="Предыдущее мероприятие">
+                  <svg class="arrow__icon" width="91" height="60" aria-hidden="true">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="swiper-arrow-next arrow" aria-label="Следующее мероприятие">
+                  <svg class="arrow__icon" width="91" height="60" aria-hidden="true">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </footer>
+            </div>
           </div>
-        </section>
-
-      </div>
+        </div>
+      </section>
 
       <!-- prettier-ignore -->
       <section class="listing home__listing">
@@ -220,26 +256,59 @@
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
 
+      <!-- prettier-ignore -->
       <section class="contacts home__contacts">
-        <h4 class="contacts__section-title section-title">Контакты</h4>
-        <div class="contacts__container">
+        <h2 class="contacts__section-title section-title">Контакты</h2>
 
+        <div class="contacts__wrapper">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="contacts__icon" aria-hidden="true">●</span>
+              <p class="contacts__text">
+                <strong>Томск, Красноармейская 146</strong>
+                <span>2 этаж</span>
+                <span>оф. 206</span>
+              </p>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__icon" aria-hidden="true">⌂</span>
+              <p class="contacts__text">
+                <strong>Отдел аренды</strong>
+                <span>8 (3822) 90-72-56</span>
+                <span>idat@tusur.ru</span>
+              </p>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__icon" aria-hidden="true">★</span>
+              <p class="contacts__text">
+                <strong>Отдел мероприятий</strong>
+                <span>8 (3822) 90-72-56</span>
+                <span>idat@tusur.ru</span>
+              </p>
+            </li>
+          </ul>
+          <div class="contacts__map" id="js-contactsMap"></div>
         </div>
       </section>
 
-      <div class="doit">
+      <!-- prettier-ignore -->
+      <div class="doit home__doit">
 
       </div>
+
+
+
+
     </div>
   </main>
 
   <footer class="page-footer">
     Footer
   </footer>
-  <div class="pp" id="eventPP">
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
+        <button class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.40864 5.99915L11.7045 1.71268C11.8926 1.52453 11.9983 1.26935 11.9983 1.00326C11.9983 0.737183 11.8926 0.481998 11.7045 0.29385C11.5164 0.105701 11.2612 0 10.9952 0C10.7291 0 10.474 0.105701 10.2859 0.29385L6 4.59031L1.71414 0.29385C1.52602 0.105701 1.27087 -1.98247e-09 1.00483 0C0.738783 1.98247e-09 0.483635 0.105701 0.295513 0.29385C0.107391 0.481998 0.00170495 0.737183 0.00170495 1.00326C0.00170495 1.26935 0.107391 1.52453 0.295513 1.71268L4.59136 5.99915L0.295513 10.2856C0.201875 10.3785 0.127553 10.489 0.0768329 10.6108C0.0261132 10.7325 0 10.8631 0 10.995C0 11.1269 0.0261132 11.2575 0.0768329 11.3793C0.127553 11.501 0.201875 11.6116 0.295513 11.7044C0.388386 11.7981 0.49888 11.8724 0.620622 11.9232C0.742363 11.9739 0.872943 12 1.00483 12C1.13671 12 1.26729 11.9739 1.38903 11.9232C1.51077 11.8724 1.62127 11.7981 1.71414 11.7044L6 7.40799L10.2859 11.7044C10.3787 11.7981 10.4892 11.8724 10.611 11.9232C10.7327 11.9739 10.8633 12 10.9952 12C11.1271 12 11.2576 11.9739 11.3794 11.9232C11.5011 11.8724 11.6116 11.7981 11.7045 11.7044C11.7981 11.6116 11.8724 11.501 11.9232 11.3793C11.9739 11.2575 12 11.1269 12 10.995C12 10.8631 11.9739 10.7325 11.9232 10.6108C11.8724 10.489 11.7981 10.3785 11.7045 10.2856L7.40864 5.99915Z" fill="white" />
           </svg>
@@ -358,7 +427,7 @@
             <button type="submit" class="btn form__submit">
               Отправить
             </button>
-            <button type="button" class="form__close-btn">
+            <button type="button" class="form__close-btn js-ppCloseBtn">
               Закрыть
             </button>
           </div>
@@ -366,6 +435,12 @@
       </div>
     </div>
   </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+  <script src="scripts/swiper.min.js"></script>
+
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

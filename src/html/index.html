@@ -17,13 +17,7 @@
                 место для настоящего</p>
             </header>
 
-            <section class="offers home__offers">
-                <h4 class="offers__section-title">я хочу:</h4>
-                <div class="offers__buttons">
-                    <button class="offers__button btn btn--red" type="button">Провести мероприятие</button>
-                    <button class="offers__button btn" type="button">Стать арендатором</button>
-                </div>
-            </section>
+            @@include('blocks/offers.html', { "class": "home__offers" })
 
             <section class="about home__about">
                 <h4 class="about__section-title section-title">О нас</h4>
@@ -32,81 +26,30 @@
                 </div>
             </section>
 
-            <div class="events">
-            
-                <section class="listing events__listing">
-                    <h1 class="listing__title section-title">Мероприятия</h1>
-            
-                    <div class="listing__events-list">
-            
-                        <!-- prettier-ignore -->
-                        @@loop('blocks/event-card.html', [
-                        {
-                        "img": "assets/images/events/nirvana-406w.jpg",
-                        "img_srcset": "assets/images/events/nirvana-280w.jpg 280w, assets/images/events/nirvana-406w.jpg 406w",
-                        "img_webp_srcset": "assets/images/events/nirvana-280w.webp 280w, assets/images/events/nirvana-406w.webp 406w",
-                        "img_small": "assets/images/events/nirvana-280w.jpg",
-                        "img_small_webp": "assets/images/events/nirvana-280w.webp",
-                        "img_width": 406,
-                        "img_height": 434,
-                        alt: 'nirvana',
-                        title: 'Собираемся и слушаем альбом Nirvana',
-                        descr: 'Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.',
-                        datetime: '2024-12-07T18:00',
-                        time: '07.12.2024 | начало 18.00'
-                        },
-                        {
-                        "img": "assets/images/events/HowStuffWorks-406w.jpg",
-                        "img_srcset": "assets/images/events/HowStuffWorks-280w.jpg 280w, assets/images/events/HowStuffWorks-406w.jpg 406w",
-                        "img_webp_srcset": "assets/images/events/HowStuffWorks-280w.webp 280w, assets/images/events/HowStuffWorks-406w.webp 406w",
-                        "img_small": "assets/images/events/HowStuffWorks-280w.jpg",
-                        "img_small_webp": "assets/images/events/HowStuffWorks-280w.webp",
-                        "img_width": 406,
-                        "img_height": 434,
-                        alt: 'HowStuffWorks',
-                        title: 'Есть тема, нужно обсудить с HowStuffWorks',
-                        descr: 'Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.',
-                        datetime: '2024-12-14T18:30',
-                        time: '14.12.2024 | начало 18.30'
-                        },
-                        {
-                        "img": "assets/images/events/Sade-406w.jpg",
-                        "img_srcset": "assets/images/events/Sade-280w.jpg 280w, assets/images/events/Sade-406w.jpg 406w",
-                        "img_webp_srcset": "assets/images/events/Sade-280w.webp 280w, assets/images/events/Sade-406w.webp 406w",
-                        "img_small": "assets/images/events/Sade-280w.jpg",
-                        "img_small_webp": "assets/images/events/Sade-280w.webp",
-                        "img_width": 406,
-                        "img_height": 434,
-                        alt: 'Вечер | The Best of Sade',
-                        title: 'Вечер | The Best of Sade',
-                        descr: 'Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.',
-                        datetime: '2024-12-16T20:00',
-                        time: '16.12.2024 | начало 20.00'
-                        }
-                        ])
-            
-                    </div>
-                </section>
-            
-            </div>
+            @@include('blocks/upcoming.html', {"class": "home__upcoming"})
 
             <!-- prettier-ignore -->
             @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
-            <section class="contacts home__contacts">
-                <h4 class="contacts__section-title section-title">Контакты</h4>
-                <div class="contacts__container">
+            <!-- prettier-ignore -->
+            @@include('blocks/contacts.html', {"class": "home__contacts"})
+
+            <!-- prettier-ignore -->
+            @@include('blocks/doit.html', {"class": "home__doit"})
+
             
-                </div>
-            </section>
 
-            <div class="doit">
-
-            </div>
+            
         </div>
     </main>
 
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+    <script src="scripts/swiper.min.js"></script>
+
+    <script src="scripts/main.min.js"></script>
 </body>
 </html>
