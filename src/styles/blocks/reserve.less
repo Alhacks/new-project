@@ -1,41 +1,83 @@
 .reserve {
-    display: grid;
-    gap: 65px 11%;
-    grid-template-columns: 405px 1fr;
-    grid-template-areas:
-        "checks scheme"
-        "order legend";
+  display: grid;
+  grid-template-columns: minmax(0, 405px) minmax(0, 1fr);
+  grid-template-areas: "checks scheme" "order legend";
+  width: 100%;
+  gap: 65px 11%;
+  &__checks {
+    grid-area: checks;
+  }
+  &__order {
+    grid-area: order;
+    min-width: 0;
+  }
+  &__scheme-wrap {
+    grid-area: scheme;
     width: 100%;
-    @media @bw1340 {
-        grid-template-columns: 340px 1fr;
-        gap: 65px 6.5%;
-    }
-    @media @bw1020 {
-        grid-template-columns: 1fr 390px;
-        grid-template-areas:
-            "scheme scheme"
-            "checks legend"
-            "checks order ";
-        gap: 60px;
-    }
-    @media @bw768 {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "scheme"
-            "legend"
-            "checks"
-            "order";
-    }
-
-    &__checks {
-        grid-area: checks;
-    }
-
-    &__order {
-        grid-area: order;
-    }
-
+    min-width: 0;
+    height: 473px;
+  }
+  &__scheme {
+    transform-origin: top left;
+  }
+  &__legend {
+    grid-area: legend;
+  }
+  @media @bw1660 {
+    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+    gap: 65px 6.5%;
     &__scheme {
-        grid-area: scheme;
+      transform: scale(0.89);
     }
+    &__scheme-wrap {
+      height: 421px;
+    }
+  }
+  @media @bw1340 {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+    &__scheme {
+      transform: scale(0.75);
+    }
+    &__scheme-wrap {
+      height: 355px;
+    }
+  }
+  @media @bw1020 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 310px);
+    grid-template-areas: "scheme scheme" "checks legend" "checks order";
+    gap: 60px;
+    &__scheme {
+      transform: scale(0.9);
+    }
+    &__scheme-wrap {
+      height: 426px;
+    }
+  }
+  @media @bw768 {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "scheme" "legend" "checks" "order";
+    gap: 60px;
+    &__scheme {
+      transform: scale(0.7);
+    }
+    &__scheme-wrap {
+      height: 331px;
+    }
+  }
+  @media @bw600 {
+    &__scheme {
+      transform: scale(0.45);
+    }
+    &__scheme-wrap {
+      height: 213px;
+    }
+  }
+  @media (max-width: 399px) {
+    &__scheme {
+      transform: scale(0.358);
+    }
+    &__scheme-wrap {
+      height: 170px;
+    }
+  }
 }

@@ -10,28 +10,28 @@
   &__body,
   &__footer {
     @media @bw768 {
-        display: block;
-        margin: 0 -20px;
-      }
+      display: block;
+      margin: 0 -20px;
+    }
   }
 
   &__head-tr {
     @media @bw768 {
-        display: flex;
-      }
+      display: flex;
+    }
   }
 
   &__tr {
     @media @bw768 {
-        display: flex;
-        flex-wrap: wrap;
-      }
+      display: flex;
+      flex-wrap: wrap;
+    }
     &:nth-child(2n-1) {
       background-color: fade(@black, 3%);
       @media @bw768 {
-          border-color: transparent;
-        }
-}
+        border-color: transparent;
+      }
+    }
   }
 
   &__th {
@@ -45,12 +45,12 @@
     }
 
     @media @bw768 {
-        font-weight: 600;
-      }
-    &:first-child{
+      font-weight: 600;
+    }
+    &:first-child {
       @media @bw768 {
-          display: none;
-        }
+        display: none;
+      }
     }
   }
 
@@ -58,29 +58,28 @@
     height: 60px;
     font-size: 0;
     @media @bw768 {
-        font-weight: 300;
-        font-size: 16px;
-      }
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 
   &__th,
   &__footer-th {
-
     @media @bw768 {
       box-sizing: border-box;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-transform: uppercase;
-      height: auto;
+      justify-content: center;
       width: 33.333%;
+      height: auto;
       padding: 20px 5px;
       font-size: 14px;
+      text-transform: uppercase;
     }
 
     box-sizing: border-box;
     padding: 10px;
-    border-right: 1px solid #BFBFBF;
+    border-right: 1px solid #bfbfbf;
     text-transform: uppercase;
 
     &:first-child {
@@ -92,8 +91,8 @@
 
     &:nth-child(2) {
       @media @bw768 {
-          padding-left: 15px;
-        }
+        padding-left: 15px;
+      }
     }
 
     &:nth-child(2n-1) {
@@ -104,13 +103,13 @@
 
     &:last-child {
       @media @bw768 {
-          padding-right: 15px;
-        }
+        padding-right: 15px;
+      }
     }
 
     &:last-child {
-      border-right: none;
       padding-right: 0;
+      border-right: none;
     }
     br {
       display: none;
@@ -125,8 +124,8 @@
     box-sizing: border-box;
     height: 50px;
     padding: 10px 10px 10px 0;
-    border-top: 1px solid #BFBFBF;
-    border-bottom: 1px solid #BFBFBF;
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -134,10 +133,10 @@
     @media @bw768 {
       display: block;
       width: 100%;
-      text-align: center;
-      font-weight: 600;
       padding: 13px 15px;
+      font-weight: 600;
       font-size: 14px;
+      text-align: center;
     }
   }
 
@@ -145,7 +144,7 @@
     box-sizing: border-box;
     height: 50px;
     padding: 10px;
-    border: 1px solid #BFBFBF;
+    border: 1px solid #bfbfbf;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
@@ -153,11 +152,11 @@
     @media @bw768 {
       box-sizing: border-box;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       width: 33.333%;
       border: none;
-      border-right: 1px solid #BFBFBF;
+      border-right: 1px solid #bfbfbf;
     }
 
     &:nth-child(2) {
@@ -172,8 +171,8 @@
     }
 
     &:last-child {
-      border-right: none;
       padding-right: 0;
+      border-right: none;
       @media @bw768 {
         padding-right: 20px;
       }
@@ -181,32 +180,8 @@
   }
   &__footer-tr {
     @media @bw768 {
-        display: flex;
-        border-top: 1px solid #BFBFBF;
-      }
-  }
-}
-
-.ok {
-  display: block;
-  position: relative;
-  width: 26px;
-  height: 26px;
-  margin: auto;
-  border-radius: 50%;
-  background-color: @black;
-
-  &::after {
-    content: "";
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: 9px;
-    width: 8px;
-    height: 14px;
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    transform: rotate(45deg);
+      display: flex;
+      border-top: 1px solid #bfbfbf;
+    }
   }
 }

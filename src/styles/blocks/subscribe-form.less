@@ -1,14 +1,63 @@
 .subscribe-form {
-  &__title { margin: 0 0 24px; font-size: 16px; font-weight: 600; }
-  &__label { .is-hidden(); }
-  &__field { margin-bottom: 16px; }
-  &__row { display: flex; }
-  &__input { min-width: 0; height: 50px; padding: 15px 28px; border-radius: 0; font-size: 14px; }
-  &__submit {
-    flex-shrink: 0; width: 135px; height: 50px; border: 0; padding: 15px 23px; background: @black; color: @white; font-size: 14px; cursor: pointer;
-    &:hover { background: @red; }
-    &:disabled { opacity: .6; cursor: wait; }
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 16px;
   }
-  &__message { margin: 10px 0 0; }
-  @media @bw600 { &__submit { padding-left: 12px; padding-right: 12px; font-size: 14px; } }
+  &__label {
+    .is-hidden();
+  }
+  &__field {
+    margin-bottom: 16px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__input {
+    min-width: 0;
+    height: 50px;
+    padding: 15px 28px;
+    border-radius: 0;
+    font-size: 14px;
+  }
+  &__submit {
+    flex-shrink: 0;
+    width: 135px;
+    height: 50px;
+    padding: 15px 23px;
+    border: 0;
+    background: @black;
+    color: @white;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+      background: @red;
+    }
+    &:disabled {
+      cursor: wait;
+      opacity: 0.6;
+    }
+  }
+  &__message {
+    margin: 10px 0 0;
+  }
+  @media @bw600 {
+    &__submit {
+      padding-right: 12px;
+      padding-left: 12px;
+      font-size: 14px;
+    }
+  }
+}
+
+.subscribe-form {
+  @media @bw600 {
+    &__title {
+      font-size: 14px;
+    }
+    &__row {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+  }
 }

@@ -1,54 +1,65 @@
 .upcoming {
-    position: relative;
+  position: relative;
+  width: 100%;
+  padding: 35px 0;
+  overflow: hidden;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid fade(@white, 60%);
+    content: "";
+  }
+
+  &::before {
+    left: 0;
+    border-right: 34vw solid transparent;
+  }
+
+  &::after {
+    right: 0;
+    border-left: 66vw solid transparent;
+  }
+  &__wrapper {
     width: 100%;
-    padding: 35px 0;
-    overflow: hidden;
+    padding: 60px 0;
+    border-color: fade(@white, 60%);
+    background-color: fade(@white, 60%);
     &::before,
     &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 0;
-        height: 0;
-        border-bottom: 35px solid fade(@white, 60%);
+      position: absolute;
+      bottom: 0;
+      display: block;
+      border-top: 35px solid fade(@white, 60%);
+      content: "";
+    }
+    &::before {
+      left: 0;
+      border-right: 60vw solid transparent;
     }
 
-    &::before{
-        left: 0;
-        border-right: 34vw solid transparent;
+    &::after {
+      right: 0;
+      border-left: 39vw solid transparent;
     }
-
-    &::after{
-        right: 0;
-        border-left: 66vw solid transparent;
-    }
+  }
+  &__container {
+    .container();
+    display: flex;
+    flex-direction: column;
+  }
+}
+.upcoming {
+  &__link {
+    align-self: flex-end;
+    margin-top: 15px;
+  }
+  @media @bw768 {
     &__wrapper {
-        width: 100%;
-        padding: 90px 0;
-        border-color: fade(@white, 60%);
-        background-color: fade(@white, 60%);
-        &::before,
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: 0;
-            border-top: 35px solid fade(@white, 60%);
-        }
-        &::before {
-            left: 0;
-            border-right: 60vw solid transparent;
-        }
-
-        &::after {
-            right: 0;
-            border-left: 39vw solid transparent;
-        }
+      padding: 60px 0;
     }
-    &__container {
-        .container();
-        display: flex;
-        flex-direction: column;
-    }
+  }
 }

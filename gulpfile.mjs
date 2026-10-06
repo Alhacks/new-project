@@ -34,7 +34,7 @@ const resources = {
     svgSprite: "src/assets/svg-sprite/*.svg",
     static: [
         "src/assets/favicons/**/*.*",
-        "src/assets/fonts/**/*.{woff,woff2}",
+        "src/assets/fonts/**/*.{woff,woff2,ttf}",
         "src/assets/icons/**/*.*",
         "!src/assets/icons/symbols.svg",
         // "src/assets/video/**/*.{mp4,webm}",
@@ -138,6 +138,11 @@ function svgSprite() {
         .src(resources.svgSprite)
         .pipe(
             svgmin({
+                full: true,
+                plugins: [{
+                    name: "preset-default",
+                    params: { overrides: { removeViewBox: false } },
+                }],
                 js2svg: {
                     pretty: true,
                 },

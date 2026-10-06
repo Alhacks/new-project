@@ -1,16 +1,28 @@
-<article class="event-card listing__event-card">
-    <a href="#" class="event-card__link">
-        <picture class="event-card__picture">
-            <source type="image/webp" srcset="@@img_webp_srcset" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px" />
-            <img src="@@img" srcset="@@img_srcset" sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px"
-                width="@@img_width" height="@@img_height" alt="@@alt"
-                loading="lazy" decoding="async" class="event-card__img" />
-        </picture>
+<article class="event-card @@class">
+  <a href="event.html" class="event-card__link">
+    <picture class="event-card__picture">
+      <source
+        type="image/webp"
+        srcset="@@img_webp_srcset"
+        sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px"
+      />
+      <img
+        src="@@img"
+        srcset="@@img_srcset"
+        sizes="(max-width: 489px) calc(100vw - 40px), (max-width: 649px) 450px, (max-width: 767px) calc((100vw - 70px) / 2), (max-width: 1019px) calc((100vw - 90px) / 2), (max-width: 1339px) calc((100vw - 140px) / 3), (max-width: 1414px) calc((100vw - 160px) / 3), 418px"
+        width="@@img_width"
+        height="@@img_height"
+        alt="@@alt"
+        loading="lazy"
+        decoding="async"
+        class="event-card__img"
+      />
+    </picture>
 
-        <h4 class="event-card__title">@@title</h4>
+    <h3 class="event-card__title">@@title</h3>
 
-        <p class="event-card__description">@@descr</p>
+    <p class="event-card__description">@@descr</p>
 
-        <time datetime="@@datetime" class="event-card__time">@@time</time>
-    </a>
+    <time datetime="@@datetime" class="event-card__time">@@time</time>
+  </a>
 </article>

@@ -1,0 +1,51 @@
+.home {
+  &__main-header {
+    margin-bottom: 100px;
+  }
+  &__about {
+    .container();
+    margin-top: 196px;
+    margin-bottom: 125px;
+  }
+  &__listing {
+    .container();
+    margin-top: 70px;
+    margin-bottom: 95px;
+  }
+  &__contacts {
+    .container();
+    margin-bottom: 150px;
+  }
+  @media @bw1660 {
+    &__about {
+      max-width: 1340px;
+    }
+  }
+  @media @bw1340 {
+    &__contacts {
+      margin-bottom: 130px;
+    }
+    &__about {
+      margin-top: 130px;
+    }
+    &__listing {
+      margin-bottom: 130px;
+    }
+  }
+  @media @bw768 {
+    &__contacts {
+      margin-bottom: 100px;
+    }
+    &__main-header {
+      margin-bottom: 40px;
+    }
+    &__about {
+      margin-top: 100px;
+      margin-bottom: 60px;
+    }
+    &__listing {
+      margin-top: 60px;
+      margin-bottom: 80px;
+    }
+  }
+}

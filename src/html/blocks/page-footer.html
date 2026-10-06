@@ -1,20 +1,79 @@
 <footer class="page-footer">
   <div class="page-footer__container">
-    <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
-      <h2 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h2>
-      <div class="field subscribe-form__field">
-        <label for="js-subscribeEmail" class="subscribe-form__label">Электронная почта</label>
-        <div class="subscribe-form__row">
-          <input class="field__input subscribe-form__input" type="email" name="email" id="js-subscribeEmail" placeholder="Email" required />
-          <button class="subscribe-form__submit" type="submit">Подписаться</button>
+    <div class="page-footer__main">
+      <nav class="page-footer__nav" aria-label="Навигация в подвале">
+        <a class="page-footer__nav-link" href="events.html">Календарь мероприятий</a>
+        <button class="page-footer__nav-link js-eventOpenBtn" type="button">
+          Провести мероприятие
+        </button>
+        <a class="page-footer__nav-link" href="index.html#contacts">Стать арендатором</a>
+        <a class="page-footer__nav-link" href="index.html#projects">Наши проекты</a>
+        <a class="page-footer__nav-link" href="index.html#contacts">Контакты</a>
+      </nav>
+      <form
+        action="https://jsonplaceholder.typicode.com/posts"
+        method="post"
+        class="page-footer__subscribe-form subscribe-form"
+        id="js-subscribeForm"
+      >
+        <h2 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h2>
+        <div class="field subscribe-form__field">
+          <label for="js-subscribeEmail" class="subscribe-form__label">Электронная почта</label>
+          <div class="subscribe-form__row">
+            <input
+              class="field__input subscribe-form__input"
+              type="email"
+              name="email"
+              id="js-subscribeEmail"
+              placeholder="Email"
+              required
+            />
+            <button class="subscribe-form__submit" type="submit">Подписаться</button>
+          </div>
         </div>
+        <label class="check subscribe-form__check">
+          <input class="check__input" type="checkbox" name="agree" required checked />
+          <span class="check__mark"></span>
+          <span class="check__label check__label--fz14">
+            Согласен на обработку персональных данных
+          </span>
+        </label>
+        <p
+          class="subscribe-form__message"
+          id="js-subscribeMessage"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+    <div class="page-footer__bottom">
+      <p class="page-footer__copyright">© Millennials 2025</p>
+      <div class="page-footer__legal">
+        <a class="page-footer__link" href="#">Политика конфиденциальности</a>
+        <a class="page-footer__link" href="#">Cookies</a>
       </div>
-      <label class="check subscribe-form__check">
-        <input class="check__input" type="checkbox" name="agree" required />
-        <span class="check__mark"></span>
-        <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
-      </label>
-      <p class="subscribe-form__message" id="js-subscribeMessage" role="status" aria-live="polite"></p>
-    </form>
+      <div class="page-footer__social">
+        <a class="page-footer__social-link" href="https://vk.com/" aria-label="ВКонтакте">
+          <svg class="page-footer__social-icon" width="58" height="58" aria-hidden="true">
+            <use href="assets/icons/symbols.svg#vk"></use>
+          </svg>
+        </a>
+        <a class="page-footer__social-link" href="https://max.ru/" aria-label="Max">
+          <svg class="page-footer__social-icon" width="58" height="58" aria-hidden="true">
+            <use href="assets/icons/symbols.svg#max"></use>
+          </svg>
+        </a>
+      </div>
+      <a class="page-footer__credits" href="https://dignity.codes/">
+        <svg
+          class="page-footer__credits-icon"
+          width="302"
+          height="35"
+          aria-label="Создание и продвижение Dignity.codes"
+        >
+          <use href="assets/icons/symbols.svg#dignity"></use>
+        </svg>
+      </a>
+    </div>
   </div>
 </footer>

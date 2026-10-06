@@ -1,28 +1,38 @@
 <article class="article-card @@class">
-    <a href="#" class="article-card__link">
-        <picture class="article-card__picture">
-            <source type="image/webp" srcset="@@img_webp_srcset" sizes="(max-width: 450px) calc(100vw - 40px), (max-width: 767px) calc(100vw - 40px), (max-width: 1169px) 708px, 467px" />
-            <img src="@@img" srcset="@@img_srcset" sizes="(max-width: 450px) calc(100vw - 40px), (max-width: 767px) calc(100vw - 40px), (max-width: 1169px) 708px, 467px"
-                width="@@img_width" height="@@img_height" alt="@@alt"
-                loading="lazy" decoding="async" class="article-card__img" />
-        </picture>
+  <a href="#" class="article-card__link">
+    <picture class="article-card__picture">
+      <source
+        type="image/webp"
+        srcset="@@img_webp_srcset"
+        sizes="(max-width: 450px) calc(100vw - 40px), (max-width: 767px) calc(100vw - 40px), (max-width: 1169px) 708px, 467px"
+      />
+      <img
+        src="@@img"
+        srcset="@@img_srcset"
+        sizes="(max-width: 450px) calc(100vw - 40px), (max-width: 767px) calc(100vw - 40px), (max-width: 1169px) 708px, 467px"
+        width="@@img_width"
+        height="@@img_height"
+        alt="@@alt"
+        loading="lazy"
+        decoding="async"
+        class="article-card__img"
+      />
+    </picture>
+  </a>
+
+  <div class="article-card__info">
+    <time datetime="@@datetime" class="article-card__time">@@time</time>
+
+    <a href="#" class="article-card__title-link">
+      <h3 class="article-card__title">@@title</h3>
+
+      <span class="article-card__arrow arrow">
+        <svg class="arrow__icon" width="92" height="62" aria-hidden="true">
+          <use href="assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </span>
     </a>
 
-    <div class="article-card__info">
-        <time datetime="@@datetime" class="article-card__time">@@time</time>
-
-        <a href="#" class="article-card__title-link">
-            <h4 class="article-card__title">@@title</h4>
-
-            <span class="article-card__arrow arrow">
-                <svg class="arrow__icon" width="92" height="62" aria-hidden="true">
-                    <use href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
-            </span>
-        </a>
-
-        <p class="article-card__description">
-            @@descr
-        </p>
-    </div>
+    <p class="article-card__description">@@descr</p>
+  </div>
 </article>

@@ -1,39 +1,41 @@
 .table-aflat {
-    display: grid;
-    width: 111px;
-    height: 83px;
-    grid-template-areas:
-        "place1 place2 .     "
-        "board  board  place3"
-        "place4 place5 .     ";
-    grid-template-columns: auto auto 24px;
-    grid-template-rows: 24px 29px 24px;
-    gap: 3px;
+  display: grid;
+  grid-template-rows: 24px 29px 24px;
+  grid-template-columns: auto auto 24px;
+  grid-template-areas:
+    "place1 place2 .     "
+    "board  board  place3"
+    "place4 place5 .     ";
+  width: 111px;
+  height: 83px;
+  gap: 3px;
 
-    &__pl1 {
-        grid-area: place1;
-    }
+  &__pl1 {
+    grid-area: place1;
+  }
 
-    &__pl2 {
-        grid-area: place2;
-    }
+  &__pl2 {
+    grid-area: place2;
+  }
 
-    &__pl3 {
-        grid-area: place3;
-        position: relative;
-        left: 0;
-    }
+  &__pl3 {
+    position: relative;
+    left: 0;
+    grid-area: place3;
+  }
 
-    &__pl4 {
-        grid-area: place4;
-    }
+  &__pl4 {
+    grid-area: place4;
+  }
 
-    &__pl5 {
-        grid-area: place5;
-    }
+  &__pl5 {
+    grid-area: place5;
+  }
 
-    &__board {
-        grid-area: board;
-        align-self: center;
-    }
+  &__board {
+    grid-area: board;
+    align-self: center;
+    width: 84px;
+    height: 29px;
+  }
 }

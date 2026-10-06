@@ -1,19 +1,72 @@
 .selectric-wrapper {
   position: relative;
-  &::before, &::after { content: ""; position: absolute; top: 27px; width: 8px; height: 2px; background: @black; z-index: 10; pointer-events: none; }
-  &::before { right: 22px; transform: rotate(-45deg); }
-  &::after { right: 27px; transform: rotate(45deg); }
-  &.selectric-open { z-index: 10; &::before { transform: rotate(45deg); } &::after { transform: rotate(-45deg); } }
+  &::before,
+  &::after {
+    position: absolute;
+    top: 27px;
+    z-index: 10;
+    width: 8px;
+    height: 2px;
+    background: @black;
+    content: "";
+    pointer-events: none;
+  }
+  &::before {
+    right: 22px;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    right: 27px;
+    transform: rotate(45deg);
+  }
+  &.selectric-open {
+    z-index: 10;
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
 .selectric {
-  height: 55px; border: none; border-radius: 5px; background: @white;
-  .button { display: none; }
-  .label { box-sizing: border-box; display: flex; align-items: center; height: 100%; margin: 0 23px; padding: 17px 20px 16px 0; color: @black; font-size: 16px; line-height: 1; }
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: @white;
+  .button {
+    display: none;
+  }
+  .label {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 23px;
+    padding: 17px 20px 16px 0;
+    color: @black;
+    font-size: 16px;
+    line-height: 1;
+  }
 }
 .selectric-items {
-  width: 100% !important; margin: 5px 0 0; border: 0; border-radius: 5px; background: @white;
-  box-shadow: 0 5px 10px fade(@black, 20%); overflow: hidden;
-  .selectric-scroll { overflow-x: hidden; overflow-y: auto; }
-  li { padding: 10px 23px; color: @black; font-size: 16px; }
+  width: 100% !important;
+  margin: 5px 0 0;
+  box-shadow: 0 5px 10px fade(@black, 20%);
+  overflow: hidden;
+  border: 0;
+  border-radius: 5px;
+  background: @white;
+  .selectric-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  li {
+    padding: 10px 23px;
+    color: @black;
+    font-size: 16px;
+  }
 }
-.selectric-focus .selectric { outline: 1px solid @red; }
+.selectric-focus .selectric {
+  outline: 1px solid @red;
+}

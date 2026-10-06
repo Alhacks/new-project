@@ -1,70 +1,80 @@
 .form {
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 60px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 60px;
+  }
+
+  &__field,
+  &__group {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &--w50 {
+      width: calc(50% - 30px);
     }
 
-    &__field,
-    &__group {
-        margin-bottom: 30px;
-        width: 100%;
-
-        &--w50 {
-            width: calc(50% - 30px);
-        }
-
-        &--m0 {
-            margin: 0;
-        }
+    &--m0 {
+      margin: 0;
     }
+  }
 
-    &__check {
-        margin: 0 0 30px;
+  &__check {
+    margin: 0 0 30px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 60px;
+  }
+
+  &__submit {
+    width: calc(50% - 30px);
+  }
+
+  &__close-btn {
+    margin: 0 auto;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: @black;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375;
+    text-decoration: underline;
+    transition: color @transition-speed;
+
+    &:hover,
+    &:active {
+      color: @red;
     }
-
-    &__title {
-        display: block;
-        margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 18px;
-    }
-
-    &__btns {
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        gap: 60px;
-
-    }
-
-    &__submit {
-        width: calc(50% - 30px);
-    }
-
-    &__close-btn {
-        margin: 0 auto;
-        padding: 5px;
-        border: none;
-        background-color: transparent;
-        text-decoration: underline;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 1.375;
-        color: @black;
-        transition: color @transition-speed;
-
-        &:hover,
-        &:active {
-            color: @red;
-        }
-    }
+  }
 }
 .form {
-  &__message { margin: 0 0 16px; }
+  &__message {
+    margin: 0 0 16px;
+  }
   @media @bw768 {
-    &__list { gap: 0; }
-    &__field--w50, &__group--w50, &__submit { width: 100%; }
-    &__btns { flex-direction: column; gap: 20px; }
+    &__list {
+      gap: 0;
+    }
+    &__field--w50,
+    &__group--w50,
+    &__submit {
+      width: 100%;
+    }
+    &__btns {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }

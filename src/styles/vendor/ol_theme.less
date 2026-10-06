@@ -1,0 +1,26 @@
+.ol-viewport canvas {
+  filter: grayscale(100%);
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
+.ol-zoom {
+  top: auto;
+  left: auto;
+  right: 20px;
+  bottom: 30px;
+}
+.ol-control button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid @red;
+  background: @red;
+  color: @white;
+  transition: background @transition-speed;
+  cursor: pointer;
+  &:hover {
+    background: @red-hover;
+    color: @white;
+  }
+}

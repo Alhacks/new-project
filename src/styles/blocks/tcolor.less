@@ -1,19 +1,27 @@
 .tcolor {
-
-    &--black * {
-        background-color: @black;
-        border-color: @black !important;
-    }
-
-    &--red * {
-        background-color: @red;
-        border-color: @red !important;
-    }
-
-    &--disable * {
-        background-color: @gray !important;
-        border-color: @gray !important;
-        color: @black !important;
-    }
-
+  &__part {
+    background: transparent;
+  }
+  &--black &__part {
+    border-color: @black;
+    color: @black;
+  }
+  &--red &__part {
+    border-color: @red;
+    color: @red;
+  }
+  &--black&--selected &__part {
+    background-color: @black;
+  }
+  &--red&--selected &__part {
+    background-color: @red;
+  }
+  &--selected &__label {
+    color: @white;
+  }
+  &--disable &__part {
+    border-color: @gray;
+    background-color: @gray;
+    color: @black;
+  }
 }

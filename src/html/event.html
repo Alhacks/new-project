@@ -1,268 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
+  @@include("blocks/head.html")
 
-@@include('blocks/head.html')
-
-<body class="body">
-
-    <!-- prettier-ignore -->
-    @@include('blocks/page-header.html')
+  <body class="body">
+    @@include("blocks/page-header.html")
     <main class="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span aria-hidden="true">/</span>
+        <a class="breadcrumbs__link" href="events.html">Мероприятия</a>
+        <span aria-hidden="true">/</span>
+        <span>Вечер | The Best of Sade</span>
+      </nav>
 
-        <article class="event">
-            <header class="event__header">
-                <h1 class="event__title">Вечер | The Best of Sade</h1>
-                <picture class="event__picture">
-                    <source type="image/webp" srcset="assets/images/events/Sade-hero-280w.webp 280w, assets/images/events/Sade-hero-522w.webp 522w" sizes="(max-width: 562px) calc(100vw - 40px), 522px" />
-                    <img src="assets/images/events/Sade-hero-522w.jpg" srcset="assets/images/events/Sade-hero-280w.jpg 280w, assets/images/events/Sade-hero-522w.jpg 522w"
-                        sizes="(max-width: 562px) calc(100vw - 40px), 522px" width="522" height="522"
-                        alt="Sade — The Best of Sade" fetchpriority="high" class="event__img" />
-                </picture>
-            </header>
-            <div class="event__contents content">
-                <h5>
-                    Программа мероприятия
-                </h5>
-                <ul>
-                    <li>20:15 — Приветствие гостей</li>
-                    <li>20:30 — Первая подача блюд | Салаты</li>
-                    <li>20:40 — Живой вокал | Композиции 1-3</li>
-                    <li>21:20 — Подача горячих блюд</li>
-                    <li>21:30 — Живой вокал | Композиции 4-7</li>
-                    <li>22:15 — Подача десерта</li>
-                    <li>22:30 — Живой вокал | Композиции 8-9</li>
-                    <li>23:00 — Завершение вечера</li>
-                </ul>
-                <h5>
-                    The Best Of Sade
-                </h5>
-                <p>
-                    Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы,
-                    раритеты и их любимые треки.
-                </p>
-                <p>
-                    Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
-                    Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов
-                    копий в Европе.
-                </p>
-                <ol>
-                    <li>Your Love Is King</li>
-                    <li>Hang On To Your Love</li>
-                    <li>Smooth Operator</li>
-                    <li>Jezebel</li>
-                    <li>The Sweetest Taboo</li>
-                    <li>Is It A Crime</li>
-                    <li>Never As Good As The First Time</li>
-                    <li>Love Is Stronger Than Pride</li>
-                    <li>Paradise</li>
-                </ol>
+      <article class="event">
+        <header class="event__header">
+          <h1 class="event__title">Вечер | The Best of Sade</h1>
+          <div class="event__hero">
+            <div class="event__info event__info--date">
+              <time class="event__date" datetime="2026-12-16">16/12/2026</time>
+              <span class="event__info-label">Кафе «Птичка»</span>
             </div>
-        
-            <form class="reserve event__reserve">
-                <div class="check-list reserve__check-list">
-                    <h4 class="check-list__title">Забронировать столик</h4>
-                    <label class="check check--red">
-                        <input class="check__input" type="checkbox" name="desk1" checked />
-                        <span class="check__mark"></span>
-                        <span class="check__label">1 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk2" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">2 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk3" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">3 стол</span>
-                    </label>
-                    <label class="check check--red">
-                        <input class="check__input" type="checkbox" name="desk4" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">4 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk5" disabled />
-                        <span class="check__mark"></span>
-                        <span class="check__label">5 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk6" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">6 стол</span>
-                    </label>
-                    <label class="check check--red">
-                        <input class="check__input" type="checkbox" name="desk7" checked />
-                        <span class="check__mark"></span>
-                        <span class="check__label">7 стол</span>
-                    </label>
-                    <label class="check check--red">
-                        <input class="check__input" type="checkbox" name="desk8" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">8 стол</span>
-                    </label>
-                    <label class="check check--red">
-                        <input class="check__input" type="checkbox" name="desk9" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">9 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk10" checked />
-                        <span class="check__mark"></span>
-                        <span class="check__label">10 стол</span>
-                    </label>
-                    <label class="check">
-                        <input class="check__input" type="checkbox" name="desk11" />
-                        <span class="check__mark"></span>
-                        <span class="check__label">11 стол</span>
-                    </label>
+            <picture class="event__picture">
+              <source
+                type="image/webp"
+                srcset="
+                  assets/images/events/Sade-hero-280w.webp 280w,
+                  assets/images/events/Sade-hero-522w.webp 522w
+                "
+                sizes="(max-width: 562px) calc(100vw - 40px), 522px"
+              />
+              <img
+                src="assets/images/events/Sade-hero-522w.jpg"
+                srcset="
+                  assets/images/events/Sade-hero-280w.jpg 280w,
+                  assets/images/events/Sade-hero-522w.jpg 522w
+                "
+                sizes="(max-width: 562px) calc(100vw - 40px), 522px"
+                width="522"
+                height="522"
+                alt="Sade — The Best of Sade"
+                fetchpriority="high"
+                class="event__img"
+              />
+            </picture>
+            <div class="event__info event__info--time">
+              <span class="event__time">
+                20.00
+                <span class="event__info-label">начало</span>
+              </span>
+              <span class="event__info-label">Ленина 10 | 2 этаж</span>
+            </div>
+          </div>
+        </header>
+        <div class="event__contents content">
+          <h2>Программа мероприятия</h2>
+          <ul>
+            <li>20:15 — Приветствие гостей</li>
+            <li>20:30 — Первая подача блюд | Салаты</li>
+            <li>20:40 — Живой вокал | Композиции 1-3</li>
+            <li>21:20 — Подача горячих блюд</li>
+            <li>21:30 — Живой вокал | Композиции 4-7</li>
+            <li>22:15 — Подача десерта</li>
+            <li>22:30 — Живой вокал | Композиции 8-9</li>
+            <li>23:00 — Завершение вечера</li>
+          </ul>
+          <h2>The Best Of Sade</h2>
+          <p>
+            Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая
+            самые популярные хиты группы, раритеты и их любимые треки.
+          </p>
+          <p>
+            Группа продемонстрировала необычайное долголетие и креативность своей творческой
+            карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно
+            платиновой в США и продав более 2 миллионов копий в Европе.
+          </p>
+          <ol>
+            <li>Your Love Is King</li>
+            <li>Hang On To Your Love</li>
+            <li>Smooth Operator</li>
+            <li>Jezebel</li>
+            <li>The Sweetest Taboo</li>
+            <li>Is It A Crime</li>
+            <li>Never As Good As The First Time</li>
+            <li>Love Is Stronger Than Pride</li>
+            <li>Paradise</li>
+          </ol>
+        </div>
 
-                </div>
-                <div class="scheme reserve__scheme">
-                    <div class="stage scheme__stage">Сцена</div>
-                    <div class="dance scheme__dance">Танцпол</div>
-                    <div class="table-aflat tcolor--red scheme__table1">
-                        <div class="place table-aflat__pl1"></div>
-                        <div class="place table-aflat__pl2"></div>
-                        <div class="place table-aflat__pl3"></div>
-                        <div class="place table-aflat__pl4"></div>
-                        <div class="place table-aflat__pl5"></div>
-                        <div class="board table-aflat__board">1</div>
-                    </div>
-                    <div class="table-vertical tcolor--black free scheme__table2">
-                        <div class="place table-vertical__pl1"></div>
-                        <div class="place table-vertical__pl2"></div>
-                        <div class="place table-vertical__pl3"></div>
-                        <div class="place table-vertical__pl4"></div>
-                        <div class="place table-vertical__pl5"></div>
-                        <div class="place table-vertical__pl6"></div>
-                        <div class="place table-vertical__pl7"></div>
-                        <div class="board table-vertical__board">2</div>
-                    </div>
-                    <div class="table-vertical tcolor--black free scheme__table3">
-                        <div class="place table-vertical__pl1"></div>
-                        <div class="place table-vertical__pl2"></div>
-                        <div class="place table-vertical__pl3"></div>
-                        <div class="place table-vertical__pl4"></div>
-                        <div class="place table-vertical__pl5"></div>
-                        <div class="place table-vertical__pl6"></div>
-                        <div class="place table-vertical__pl7"></div>
-                        <div class="board table-vertical__board">3</div>
-                    </div>
-                    <div class="table-aflat tcolor--red free scheme__table4">
-                        <div class="place table-aflat__pl1"></div>
-                        <div class="place table-aflat__pl2"></div>
-                        <div class="place table-aflat__pl3"></div>
-                        <div class="place table-aflat__pl4"></div>
-                        <div class="place table-aflat__pl5"></div>
-                        <div class="board table-aflat__board">4</div>
-                    </div>
-                    <div class="table-vertical tcolor--disable scheme__table5">
-                        <div class="place table-vertical__pl1"></div>
-                        <div class="place table-vertical__pl2"></div>
-                        <div class="place table-vertical__pl3"></div>
-                        <div class="place table-vertical__pl4"></div>
-                        <div class="place table-vertical__pl5"></div>
-                        <div class="place table-vertical__pl6"></div>
-                        <div class="place table-vertical__pl7"></div>
-                        <div class="board table-vertical__board">5</div>
-                    </div>
-                    <div class="table-vertical tcolor--black free scheme__table6">
-                        <div class="place table-vertical__pl1"></div>
-                        <div class="place table-vertical__pl2"></div>
-                        <div class="place table-vertical__pl3"></div>
-                        <div class="place table-vertical__pl4"></div>
-                        <div class="place table-vertical__pl5"></div>
-                        <div class="place table-vertical__pl6"></div>
-                        <div class="place table-vertical__pl7"></div>
-                        <div class="board table-vertical__board">6</div>
-                    </div>
-                    <div class="table-aflatnt tcolor--red scheme__table7">
-                        <div class="place table-aflatnt__pl1"></div>
-                        <div class="place table-aflatnt__pl2"></div>
-                        <div class="place table-aflatnt__pl3"></div>
-                        <div class="place table-aflatnt__pl4"></div>
-                        <div class="board table-aflatnt__board">7</div>
-                    </div>
-                    <div class="table-small free tcolor--red scheme__table8">
-                        <div class="place table-small__pl1"></div>
-                        <div class="place table-small__pl2"></div>
-                        <div class="place table-small__pl3"></div>
-                        <div class="board table-small__board">8</div>
-                    </div>
-                    <div class="table-small tcolor--red free scheme__table9">
-                        <div class="place table-small__pl1"></div>
-                        <div class="place table-small__pl2"></div>
-                        <div class="place table-small__pl3"></div>
-                        <div class="board table-small__board">9</div>
-                    </div>
-                    <div class="table-bar tcolor--black scheme__table10">
-                        <div class="place table-bar__pl1"></div>
-                        <div class="place table-bar__pl2"></div>
-                        <div class="place table-bar__pl3"></div>
-                        <div class="place table-bar__pl4"></div>
-                        <div class="board board--right table-bar__right">10</div>
-                        <div class="board board--bot table-bar__bot"></div>
-                    </div>
-                    <div class="table-vertical tcolor--black free scheme__table11">
-                        <div class="place table-vertical__pl1"></div>
-                        <div class="place table-vertical__pl2"></div>
-                        <div class="place table-vertical__pl3"></div>
-                        <div class="place table-vertical__pl4"></div>
-                        <div class="place table-vertical__pl5"></div>
-                        <div class="place table-vertical__pl6"></div>
-                        <div class="place table-vertical__pl7"></div>
-                        <div class="board table-vertical__board">11</div>
-                    </div>
+        <form class="reserve event__reserve" id="js-reserveForm">
+          <div class="check-list reserve__checks">
+            <h3 class="check-list__title">Забронировать столик</h3>
+            <label class="check check--red">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk1" checked />
+              <span class="check__mark"></span>
+              <span class="check__label">1 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk2" />
+              <span class="check__mark"></span>
+              <span class="check__label">2 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk3" />
+              <span class="check__mark"></span>
+              <span class="check__label">3 стол</span>
+            </label>
+            <label class="check check--red">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk4" />
+              <span class="check__mark"></span>
+              <span class="check__label">4 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk5" disabled />
+              <span class="check__mark"></span>
+              <span class="check__label">5 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk6" />
+              <span class="check__mark"></span>
+              <span class="check__label">6 стол</span>
+            </label>
+            <label class="check check--red">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk7" checked />
+              <span class="check__mark"></span>
+              <span class="check__label">7 стол</span>
+            </label>
+            <label class="check check--red">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk8" />
+              <span class="check__mark"></span>
+              <span class="check__label">8 стол</span>
+            </label>
+            <label class="check check--red">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk9" />
+              <span class="check__mark"></span>
+              <span class="check__label">9 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk10" checked />
+              <span class="check__mark"></span>
+              <span class="check__label">10 стол</span>
+            </label>
+            <label class="check">
+              <input class="check__input js-reserveCheck" type="checkbox" name="desk11" />
+              <span class="check__mark"></span>
+              <span class="check__label">11 стол</span>
+            </label>
+          </div>
+          <div class="reserve__scheme-wrap">
+            <div class="scheme reserve__scheme">
+              <div class="stage scheme__stage">Сцена</div>
+              <div class="dance scheme__dance">Танцпол</div>
+              <div
+                class="table-aflat tcolor tcolor--red scheme__table1 js-reserveTable"
+                data-table="desk1"
+                data-price="1400"
+              >
+                <div class="place tcolor__part js-reservePlace table-aflat__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl5"></div>
+                <div class="board tcolor__part tcolor__label table-aflat__board">1</div>
+              </div>
+              <div
+                class="table-vertical tcolor tcolor--black scheme__table2 js-reserveTable"
+                data-table="desk2"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-vertical__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl5"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl6"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl7"></div>
+                <div class="board tcolor__part tcolor__label table-vertical__board">2</div>
+              </div>
+              <div
+                class="table-vertical tcolor tcolor--black scheme__table3 js-reserveTable"
+                data-table="desk3"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-vertical__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl5"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl6"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl7"></div>
+                <div class="board tcolor__part tcolor__label table-vertical__board">3</div>
+              </div>
+              <div
+                class="table-aflat tcolor tcolor--red scheme__table4 js-reserveTable"
+                data-table="desk4"
+                data-price="1400"
+              >
+                <div class="place tcolor__part js-reservePlace table-aflat__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-aflat__pl5"></div>
+                <div class="board tcolor__part tcolor__label table-aflat__board">4</div>
+              </div>
+              <div
+                class="table-vertical tcolor tcolor--disable scheme__table5 js-reserveTable"
+                data-table="desk5"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-vertical__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl5"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl6"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl7"></div>
+                <div class="board tcolor__part tcolor__label table-vertical__board">5</div>
+              </div>
+              <div
+                class="table-vertical tcolor tcolor--black scheme__table6 js-reserveTable"
+                data-table="desk6"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-vertical__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl5"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl6"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl7"></div>
+                <div class="board tcolor__part tcolor__label table-vertical__board">6</div>
+              </div>
+              <div
+                class="table-aflatnt tcolor tcolor--red scheme__table7 js-reserveTable"
+                data-table="desk7"
+                data-price="1400"
+              >
+                <div class="place tcolor__part js-reservePlace table-aflatnt__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-aflatnt__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-aflatnt__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-aflatnt__pl4"></div>
+                <div class="board tcolor__part tcolor__label table-aflatnt__board">7</div>
+              </div>
+              <div
+                class="table-small tcolor tcolor--red scheme__table8 js-reserveTable"
+                data-table="desk8"
+                data-price="1400"
+              >
+                <div class="place tcolor__part js-reservePlace table-small__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-small__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-small__pl3"></div>
+                <div class="board tcolor__part tcolor__label table-small__board">8</div>
+              </div>
+              <div
+                class="table-small tcolor tcolor--red scheme__table9 js-reserveTable"
+                data-table="desk9"
+                data-price="1400"
+              >
+                <div class="place tcolor__part js-reservePlace table-small__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-small__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-small__pl3"></div>
+                <div class="board tcolor__part tcolor__label table-small__board">9</div>
+              </div>
+              <div
+                class="table-bar tcolor tcolor--black scheme__table10 js-reserveTable"
+                data-table="desk10"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-bar__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-bar__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-bar__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-bar__pl4"></div>
+                <div class="board tcolor__part tcolor__label board--right table-bar__right">10</div>
+                <div class="board tcolor__part tcolor__label board--bot table-bar__bot"></div>
+              </div>
+              <div
+                class="table-vertical tcolor tcolor--black scheme__table11 js-reserveTable"
+                data-table="desk11"
+                data-price="1250"
+              >
+                <div class="place tcolor__part js-reservePlace table-vertical__pl1"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl2"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl3"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl4"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl5"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl6"></div>
+                <div class="place tcolor__part js-reservePlace table-vertical__pl7"></div>
+                <div class="board tcolor__part tcolor__label table-vertical__board">11</div>
+              </div>
+            </div>
+          </div>
+          <div class="order reserve__order">
+            <h3 class="order__title">Ваши пригласительные билеты</h3>
+            <div class="order__item">
+              <span class="order__item-details js-orderDetails">9 шт. | 1400 ₽</span>
+              <span class="order__item-price js-orderPrice">12 600 ₽</span>
+            </div>
+            <div class="order__item">
+              <span class="order__item-details js-orderDetails">4 шт. | 1250 ₽</span>
+              <span class="order__item-price js-orderPrice">5 000 ₽</span>
+            </div>
+            <div class="order__total">
+              <span class="order__total-label">Сумма</span>
+              <span class="order__total-value" id="js-orderTotal">17 600 ₽</span>
+            </div>
+            <input type="hidden" name="tables" id="js-reserveSelection" />
+            <p class="order__message" id="js-reserveMessage" role="status"></p>
+            <button type="submit" class="btn btn--red order__submit">Купить билеты</button>
+          </div>
+          <div class="legend reserve__legend">
+            <h3 class="legend__title">Стоимость пригласительного билета</h3>
+            <ul class="legend__list legend__list--price">
+              <li class="legend__item">
+                <span class="legend__icon legend__icon-box legend__icon-box--red"></span>
+                <span class="legend__text">1400 ₽ | 1 персона</span>
+              </li>
+              <li class="legend__item">
+                <span class="legend__icon legend__icon-box legend__icon-box--black"></span>
+                <span class="legend__text">1250 ₽ | 1 персона</span>
+              </li>
+            </ul>
 
-
-                    
-                </div>
-                <div class="order reserve__order">
-                    <h4 class="order__title">Ваши пригласительные билеты</h4>
-                    <div class="order__item">
-                        <span class="order__item-details">9 шт. | 1400 ₽</span>
-                        <span class="order__item-price">12 600 ₽</span>
-                    </div>
-                    <div class="order__item">
-                        <span class="order__item-details">4 шт. | 1250 ₽</span>
-                        <span class="order__item-price">5 000 ₽</span>
-                    </div>
-                    <div class="order__total">
-                        <span class="order__total-label">Сумма</span>
-                        <span class="order__total-value">17 600 ₽</span>
-                    </div>
-                    <button class="btn btn--red order__submit">Купить билеты</button>
-                </div>
-                <div class="legend reserve__legend">
-                    <h4 class="legend__title">Стоимость пригласительного билета</h4>
-                    <ul class="legend__list legend__list--price">
-                        <li>
-                            <span class="legend__icon legend__icon-box legend__icon-box--red"></span>
-                            <span class="legend__text">1400 ₽ | 1 персона</span>
-                        </li>
-                        <li>
-                            <span class="legend__icon legend__icon-box legend__icon-box--black"></span>
-                            <span class="legend__text">1250 ₽ | 1 персона</span>
-                        </li>
-                    </ul>
-                
-                    <h4 class="legend__title legend__title-note">Примечание</h4>
-                    <ul class="legend__list legend__list--note">
-                        <li>
-                            <span class="legend__icon legend__icon-circles--left"></span>
-                            <span class="legend__icon legend__icon-circles--right"></span>
-                            <span class="legend__text">доступные места</span>
-                        </li>
-                        <li><span class="legend__icon legend__icon-circle"></span>забронировано</li>
-                    </ul>
-                </div>
-            </form>
-        </article>
-        
+            <h3 class="legend__title legend__title-note">Примечание</h3>
+            <ul class="legend__list legend__list--note">
+              <li class="legend__item">
+                <span class="legend__icon legend__icon-circles legend__icon-circles--left"></span>
+                <span class="legend__icon legend__icon-circles legend__icon-circles--right"></span>
+                <span class="legend__text">доступные места</span>
+              </li>
+              <li class="legend__item">
+                <span class="legend__icon legend__icon-circle"></span>
+                забронировано
+              </li>
+            </ul>
+          </div>
+        </form>
+      </article>
     </main>
-    @@include('blocks/page-footer.html')
-    @@include('blocks/scripts.html')
-</body>
-
+    @@include("blocks/page-footer.html")
+    @@include("blocks/event-pp.html")
+    @@include("blocks/scripts.html")
+  </body>
 </html>

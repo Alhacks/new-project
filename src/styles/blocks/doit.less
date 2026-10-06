@@ -1,0 +1,51 @@
+.doit {
+  margin: 0 0 200px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  &__text {
+    width: max-content;
+    margin: 0 0 0 -40px;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 1.2;
+    font-family: @font3;
+    white-space: nowrap;
+  }
+  &__text--right {
+    margin-right: -120px;
+    margin-left: auto;
+  }
+  @media @bw1660 {
+    &__text {
+      font-size: 100px;
+    }
+  }
+  @media @bw1340 {
+    margin-bottom: 100px;
+    &__text:first-child {
+      width: 100%;
+      margin-left: 0;
+    }
+    &__line {
+      display: block;
+      width: max-content;
+      margin-left: -40px;
+    }
+    &__line--right {
+      margin-right: -60px;
+      margin-left: auto;
+    }
+    &__text {
+      font-size: 70px;
+    }
+  }
+  @media @bw768 {
+    margin-bottom: 80px;
+    &__text {
+      font-size: 40px;
+    }
+    &__text--right {
+      margin-right: -80px;
+    }
+  }
+}

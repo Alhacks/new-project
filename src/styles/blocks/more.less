@@ -1,33 +1,42 @@
 .more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 132px;
+
+  &__link {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 132px;
+    width: 128px;
+    padding-top: 1px;
+    gap: 18px;
+    text-align: center;
+  }
 
-    &__link {
-        box-sizing: border-box;
-        width: 128px;
-        padding-top: 1px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 18px;
-        text-align: center;
-    }
+  &__text {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
 
-    &__text {
-        margin: 0;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 22px;
-    }
-
-    &__arrow {
-        text-align: center;
-    }
+  &__arrow {
+    text-align: center;
+  }
 }
 
 .more .more__arrow {
-    width: 62px;
-    height: 91px;
+  width: 62px;
+  height: 91px;
+}
+
+.more {
+  &__link {
+    &:hover,
+    &:focus-visible {
+      color: @red;
+    }
+  }
 }

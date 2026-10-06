@@ -1,3 +1,241 @@
 .about {
-    margin: 200px 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(0, 870fr) minmax(0, 406fr);
+    grid-template-areas: "title title" "intro intro" "concert exhibition" "subtitle exhibition" "description description" "space extra";
+    gap: 60px 58px;
+  }
+  &__title,
+  &__subtitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+  &__title {
+    grid-area: title;
+  }
+  &__intro {
+    grid-area: intro;
+    justify-self: end;
+    width: 867px;
+    max-width: 100%;
+    margin: -10px 0 40px;
+  }
+  &__picture {
+    position: relative;
+    display: block;
+    min-width: 0;
+  }
+  &__picture--concert {
+    grid-area: concert;
+  }
+  &__picture--exhibition {
+    grid-area: exhibition;
+    align-self: end;
+    margin-bottom: 0;
+  }
+  &__picture--space {
+    grid-area: space;
+    width: 100%;
+    margin: 20px 0 0 49px;
+    &::before {
+      z-index: -1;
+      position: absolute;
+      top: -20px;
+      left: -49px;
+      width: calc(100% + 59px);
+      height: 65%;
+      background: @red;
+      content: "";
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &__subtitle {
+    grid-area: subtitle;
+  }
+  &__description {
+    grid-area: description;
+    justify-self: end;
+    width: 950px;
+    max-width: 100%;
+    margin: 20px 0 0;
+  }
+  &__extra {
+    grid-area: extra;
+    align-self: end;
+    margin-left: 62px;
+  }
+  &__extra-text {
+    max-width: 350px;
+    margin: 0 0 88px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: 600;
+    transition: color @transition-speed;
+    &:hover {
+      color: @red;
+    }
+  }
+  @media @bw1660 {
+    &__container {
+      grid-template-columns: minmax(0, 867fr) minmax(0, 353fr);
+      column-gap: 40px;
+    }
+    &__picture--space {
+      width: calc(100% - 46px);
+      margin-top: 18px;
+      margin-left: 38px;
+      &::before {
+        top: -18px;
+        left: -38px;
+        width: calc(100% + 46px);
+      }
+    }
+    &__extra {
+      margin-left: 0;
+    }
+    &__extra-text {
+      max-width: none;
+      margin-bottom: 86px;
+    }
+    &__title,
+    &__subtitle {
+      font-size: 34px;
+    }
+  }
+  @media @bw1340 {
+    font-size: 16px;
+    &__picture--space {
+      width: calc(100% - 49px);
+      margin-top: 20px;
+      margin-left: 49px;
+      &::before {
+        top: -20px;
+        left: -49px;
+        width: calc(100% + 59px);
+      }
+    }
+    &__container {
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+      gap: 40px 30px;
+    }
+    &__title,
+    &__subtitle {
+      font-size: 26px;
+    }
+    &__intro {
+      width: 637px;
+      margin: 0 0 10px;
+    }
+    &__description {
+      width: 637px;
+    }
+    &__extra-text {
+      margin-bottom: 30px;
+    }
+  }
+  @media @bw768 {
+    &__container {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "title" "intro" "concert" "subtitle" "description" "exhibition" "space" "extra";
+      gap: 40px;
+    }
+    &__title,
+    &__subtitle {
+      font-size: 18px;
+    }
+    &__intro,
+    &__description {
+      width: 100%;
+      margin: 0;
+    }
+    &__picture--exhibition {
+      justify-self: end;
+      width: 69%;
+    }
+    &__picture--space {
+      width: calc(100% - 10px);
+      margin: 20px 0 0 10px;
+      &::before {
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 10px);
+      }
+    }
+    &__extra-text {
+      max-width: none;
+      margin: 20px 0 30px;
+    }
+  }
+}
+
+.about {
+  @media @w1660 {
+    &__subtitle {
+      margin-top: 40px;
+    }
+    &__picture--exhibition {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.about {
+  @media @bw1340 {
+    &__container {
+      grid-template-areas: "title title" "intro intro" "concert concert" "subtitle exhibition" "description exhibition" "space space" "extra extra";
+    }
+    &__picture--exhibition {
+      align-self: center;
+    }
+    &__description {
+      width: 100%;
+      max-width: 85%;
+      margin: 0;
+    }
+    &__extra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+    &__extra-text {
+      width: 280px;
+      max-width: 50%;
+      margin: 0;
+    }
+    &__link {
+      width: 260px;
+    }
+  }
+  @media @bw768 {
+    &__container {
+      grid-template-areas: "title" "intro" "concert" "subtitle" "description" "exhibition" "space" "extra";
+    }
+    &__description {
+      max-width: 100%;
+    }
+    &__extra {
+      display: block;
+    }
+    &__extra-text {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px 0 30px;
+    }
+    &__link {
+      width: 100%;
+    }
+  }
 }

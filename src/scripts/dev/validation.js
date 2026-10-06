@@ -17,23 +17,42 @@
     rangelength: $.validator.format("Введите от {0} до {1} символов"),
     range: $.validator.format("Введите число от {0} до {1}"),
     max: $.validator.format("Введите число не больше {0}"),
-    min: $.validator.format("Введите число не меньше {0}")
+    min: $.validator.format("Введите число не меньше {0}"),
   });
 
   // Пример собственного метода из лекции 12.
-  $.validator.addMethod("email", function (value, element) {
-    return this.optional(element) || /^[-\w.]+@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/.test(value);
-  }, "Введите корректный e-mail");
+  $.validator.addMethod(
+    "email",
+    function (value, element) {
+      return (
+        this.optional(element) || /^[-\w.]+@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/.test(value)
+      );
+    },
+    "Введите корректный e-mail",
+  );
 
   const errorPlacement = function (error, element) {
-    // Selectric и наши чекбоксы скрывают исходные элементы.
-    // Поэтому выводим сообщение в видимый контейнер поля.
     if (element.hasClass("check__input")) {
-      error.appendTo(element.closest(".check"));
+      error.addClass("check__error").appendTo(element.closest(".check"));
     } else {
-      error.appendTo(element.closest(".field"));
+      error.addClass("field__error").appendTo(element.closest(".field"));
     }
   };
+
+  const inputErrorClass = function (element) {
+    if ($(element).hasClass("check__input")) return "check__input--error";
+    if ($(element).hasClass("field__select")) return "field__select--error";
+    if ($(element).hasClass("field__date-picker")) return "field__date-picker--error";
+    return "field__input--error";
+  };
+
+  $.validator.addMethod(
+    "phoneMask",
+    function (value, element) {
+      return this.optional(element) || /^\+7 \(\d{3}\) \d{3} \d{2} \d{2}$/.test(value);
+    },
+    "Введите телефон полностью",
+  );
 
   const eventForm = $("#js-eventForm");
   if (eventForm.length) {
@@ -41,16 +60,29 @@
       errorElement: "span",
       ignore: ":hidden:not(.js-selectric):not(.check__input)",
       errorPlacement: errorPlacement,
-      rules: { phone: { minlength: 18 } },
-      messages: { phone: { minlength: "Введите телефон полностью" } },
+      highlight: function (element) {
+        $(element).addClass(inputErrorClass(element));
+      },
+      unhighlight: function (element) {
+        $(element).removeClass(inputErrorClass(element));
+      },
+      rules: { phone: { phoneMask: true } },
       submitHandler: function (form, event) {
         event.preventDefault();
-        $("#js-eventMessage").text("Поля заполнены правильно. Это учебная форма: заявка не отправляется.");
+        $("#js-eventMessage").text(
+          "Поля заполнены правильно. Это учебная форма: заявка не отправляется.",
+        );
       },
-      invalidHandler: function () { $("#js-eventMessage").text(""); }
+      invalidHandler: function () {
+        $("#js-eventMessage").text("");
+      },
     });
-    eventForm.on("input change", function () { $("#js-eventMessage").text(""); });
-    eventForm.find(".js-selectric").on("change", function () { $(this).valid(); });
+    eventForm.on("input change", function () {
+      $("#js-eventMessage").text("");
+    });
+    eventForm.find(".js-selectric").on("change", function () {
+      $(this).valid();
+    });
   }
 
   const subscribeForm = $("#js-subscribeForm");
@@ -64,6 +96,12 @@
       errorElement: "span",
       ignore: ":hidden:not(.check__input)",
       errorPlacement: errorPlacement,
+      highlight: function (element) {
+        $(element).addClass(inputErrorClass(element));
+      },
+      unhighlight: function (element) {
+        $(element).removeClass(inputErrorClass(element));
+      },
       submitHandler: function (form, event) {
         event.preventDefault();
         subscribeMessage.text("Отправляем учебный запрос…");
@@ -83,10 +121,14 @@
           error: function () {
             subscribeMessage.text("Запрос не отправлен. Попробуйте ещё раз.");
           },
-          complete: function () { subscribeSubmit.prop("disabled", false); }
+          complete: function () {
+            subscribeSubmit.prop("disabled", false);
+          },
         });
-      }
+      },
     });
-    subscribeForm.on("input change", function () { subscribeMessage.text(""); });
+    subscribeForm.on("input change", function () {
+      subscribeMessage.text("");
+    });
   }
 })();

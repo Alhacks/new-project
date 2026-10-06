@@ -1,20 +1,32 @@
 .offers {
-    max-width: 624px;
-    margin: 0 auto;
-
-    &__buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
+  width: 624px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &__section-title {
+    margin: 0 0 46px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: @font2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media @bw768 {
     &__section-title {
-        font-family: "Lora", "Arial", sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 1.4;
-        text-transform: uppercase;
-        text-align: center;
-        margin: 0 0 46px 0;
+      margin-bottom: 30px;
+      font-size: 13px;
     }
+    &__buttons {
+      flex-direction: column-reverse;
+      gap: 25px;
+    }
+    &__button {
+      width: 100%;
+    }
+  }
 }

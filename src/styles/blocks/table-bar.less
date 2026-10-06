@@ -1,38 +1,49 @@
 .table-bar {
-    display: grid;
-    width: 127px;
-    height: 93px;
-    grid-template-areas:
-        ".      .      place1 right"
-        "place2 place3 place4 right"
-        "bot    bot    bot    right";
-    grid-template-columns: auto auto auto 30px;
-    grid-template-rows: auto auto 30px;
-    
+  display: grid;
+  grid-template-rows: auto auto 30px;
+  grid-template-columns: auto auto auto 30px;
+  grid-template-areas:
+    ".      .      place1 right"
+    "place2 place3 place4 right"
+    "bot    bot    bot    right";
+  width: 127px;
+  height: 93px;
 
-    &__pl1 {
-        grid-area: place1;
+  &__pl1 {
+    grid-area: place1;
+  }
+
+  &__pl2 {
+    grid-area: place2;
+  }
+
+  &__pl3 {
+    grid-area: place3;
+  }
+
+  &__pl4 {
+    grid-area: place4;
+  }
+
+  &__right {
+    position: relative;
+    grid-area: right;
+    border-left: 0;
+
+    &::before {
+      position: absolute;
+      top: -1px;
+      bottom: 29px;
+      left: 0;
+      border-left: 1px solid;
+      border-color: inherit;
+      content: "";
     }
+  }
 
-    &__pl2 {
-        grid-area: place2;
-    }
-
-    &__pl3 {
-        grid-area: place3;
-    }
-
-    &__pl4 {
-        grid-area: place4;
-    }
-
-    &__right {
-        grid-area: right;
-    }
-
-    &__bot {
-        grid-area: bot;
-    }
-
-
+  &__bot {
+    grid-area: bot;
+    margin-right: -1px;
+    border-right: 0;
+  }
 }

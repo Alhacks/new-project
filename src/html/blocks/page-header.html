@@ -1,35 +1,41 @@
 <header class="page-header">
-    <div class="page-header__container">
-        <a href="#" class="page-header__logo">
-            <svg class="page-header__logo-icon" width="202" height="147">
-                <use xlink:href="assets/icons/symbols.svg#logo"></use>
-            </svg>
+  <div class="page-header__container">
+    <a href="index.html" class="page-header__logo" aria-label="Lenni Art — главная">
+      <svg class="page-header__logo-icon" width="202" height="147">
+        <use xlink:href="assets/icons/symbols.svg#logo"></use>
+      </svg>
+    </a>
+
+    <nav class="page-header__nav" id="js-nav">
+      <a href="events.html" class="page-header__nav-link js-navLink">Мероприятия</a>
+      <a href="index.html#blog" class="page-header__nav-link js-navLink">Блог</a>
+      <a href="index.html#about" class="page-header__nav-link js-navLink">О нас</a>
+      <a href="index.html#contacts" class="page-header__nav-link js-navLink">Контакты</a>
+      <div class="page-header__nav-user">
+        <a href="#" class="page-header__nav-user-link">Александр С.</a>
+        <a href="#" class="page-header__nav-logout">
+          <svg class="page-header__logo-icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#logout"></use>
+          </svg>
         </a>
+      </div>
+    </nav>
 
-        <nav class="page-header__nav">
-            <a href="#" class="page-header__nav-link">Мероприятия</a>
-            <a href="#" class="page-header__nav-link">Блог</a>
-            <a href="#" class="page-header__nav-link">О нас</a>
-            <a href="#" class="page-header__nav-link">Контакты</a>
-            <div class="page-header__nav-user">
-                <a href="#" class="page-header__nav-user-link">Александр С.</a>
-                <a href="#" class="page-header__nav-logout">
-                    <svg class="page-header__logo-icon" width="24" height="24">
-                        <use xlink:href="assets/icons/symbols.svg#logout"></use>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-        <div class="page-header__right-block">
-            <a href="#" class="page-header__btn">
-                Войти
-                <svg class="page-header__user-icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#user"></use>
-                </svg>
-            </a>
-            <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
-        </div>
+    <div class="page-header__right-block">
+      <a href="#" class="page-header__btn">
+        Войти
+        <svg class="page-header__user-icon" width="24" height="24">
+          <use xlink:href="assets/icons/symbols.svg#user"></use>
+        </svg>
+      </a>
+      <button
+        type="button"
+        class="page-header__nav-toggle"
+        id="js-navToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="js-nav"
+      ></button>
     </div>
-
+  </div>
 </header>

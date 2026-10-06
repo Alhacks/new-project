@@ -1,92 +1,92 @@
-
-
 .event-card {
+  display: flex;
+  width: 406px;
+  min-width: 0;
+  max-width: 100%;
+
+  &__link {
     display: flex;
-    width: 406px;
-    max-width: 100%;
-    min-width: 280px;
+    flex-direction: column;
+    width: 100%;
+    color: @black;
+    text-decoration: none;
 
-    &__link {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        color: @black;
-        text-decoration: none;
+    &:hover .event-card__title {
+      color: @red;
+      text-decoration-color: @red;
+    }
+  }
 
-        &:hover .event-card__title {
-            color: @red;
-            text-decoration-color: @red;
-        }
+  &__picture {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 0 25px;
+    overflow: hidden;
+    font-size: 0;
+    text-decoration: none;
+    @media @bw1660 {
+      margin: 0 0 20px;
     }
 
-    &__picture {
-        display: block;
-        position: relative;
-        width: 100%;
-        margin: 0 0 25px;
-        font-size: 0;
-        text-decoration: none;
-        overflow: hidden;
-        @media @bw1660 {
-            margin: 0 0 20px;
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            padding-top: 107.16%;
-        }
+    &::after {
+      display: block;
+      width: 100%;
+      padding-top: 107.16%;
+      content: "";
     }
+  }
 
-    &__img {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    &__title {
-        margin: 0 0 15px;
-        min-height: 66px;
-        color: @black;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 33px;
-        text-decoration: underline transparent;
-        transition: color @transition-speed, text-decoration-color @transition-speed;
-        @media @bw1660 {
-            margin: 0 0 10px;
-        }
-        @media @bw1340 {
-            font-size: 20px;
-            line-height: 27px;
-            min-height: 54px;
-        }
-        @media @bw768 {
-            min-height: 45px;
-            font-size: 16px;
-            line-height: 22px;
-        }
+  &__title {
+    min-height: 66px;
+    margin: 0 0 15px;
+    color: @black;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration: underline transparent;
+    transition:
+      color @transition-speed,
+      text-decoration-color @transition-speed;
+    @media @bw1660 {
+      margin: 0 0 10px;
     }
+    @media @bw1340 {
+      min-height: 54px;
+      font-size: 20px;
+      line-height: 27px;
+    }
+    @media @bw768 {
+      min-height: 45px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
 
-    &__description {
-        margin: 0 0 auto;
-        font-size: 16px;
-        line-height: 22px;
-        @media @bw768 {
-            font-size: 14px;
-            line-height: 19px;
-        }
+  &__description {
+    margin: 0 0 auto;
+    font-size: 16px;
+    line-height: 22px;
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
     }
+  }
 
-    &__time {
-        margin: 15px 0 0;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 19px;
-    }
+  &__time {
+    margin: 15px 0 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
