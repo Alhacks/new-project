@@ -41,7 +41,12 @@
     $("#js-reserveSelection").val(red + black ? "selected" : "");
     $("#js-reserveMessage").text("");
   };
-  checks.on("change", updateOrder);
+  checks.on("change", function () {
+    updateOrder();
+    if ($("#js-reserveSelection").val()) {
+      $("#js-reserveSelection").valid();
+    }
+  });
   updateOrder();
   reserveForm.validate({
     ignore: ":hidden:not(#js-reserveSelection)",
